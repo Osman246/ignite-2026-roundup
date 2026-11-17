@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LinkedIn post mockup</title>
+<style>
+:root{--bg:#f3f2ef;--card:#fff;--ink:#191919;--ink2:#5e5e5e;--rule:#e0dfdc;--blue:#0a66c2;}
+@media (prefers-color-scheme: dark){:root{--bg:#000;--card:#1b1f23;--ink:#e9e9e9;--ink2:#a8a8a8;--rule:#38434f;--blue:#71b7fb;}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);padding:24px 16px}
+.note{max-width:555px;margin:0 auto 12px;font-size:12px;color:var(--ink2);text-align:center}
+.card{max-width:555px;margin:0 auto;background:var(--card);border-radius:8px;border:1px solid var(--rule);overflow:hidden}
+.hd{display:flex;gap:8px;padding:12px 16px 0} .av{width:48px;height:48px;border-radius:50%;background:#2a78d6;color:#fff;display:grid;place-items:center;font-weight:600;flex:none}
+.nm{font-weight:600;font-size:14px} .sub{font-size:12px;color:var(--ink2)} .fol{margin-left:auto;color:var(--blue);font-weight:600;white-space:nowrap}
+.tx{padding:8px 16px 4px;font-size:14px;white-space:normal} .more{color:var(--ink2);cursor:pointer;border:0;background:none;font:inherit;padding:0} .tag{color:var(--blue);font-weight:600}
+.doc{margin-top:8px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);position:relative;background:#f4f5f7}
+.doc-hd{display:flex;justify-content:space-between;padding:8px 12px;font-size:12px;background:rgba(0,0,0,.72);color:#fff;position:absolute;top:0;left:0;right:0;z-index:2}
+.doc img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:18px;cursor:pointer;z-index:2}
+.nav:disabled{opacity:.25;cursor:default} .prev{left:8px} .next{right:8px}
+.bar{position:absolute;bottom:0;left:0;height:4px;background:#0a66c2;z-index:2;transition:width .2s}
+.stats{display:flex;justify-content:space-between;padding:8px 16px;font-size:12px;color:var(--ink2);border-bottom:1px solid var(--rule)}
+.react{display:inline-flex;gap:2px;margin-right:4px} .react i{width:16px;height:16px;border-radius:50%;display:inline-block;border:1px solid var(--card)}
+.acts{display:flex;justify-content:space-around;padding:4px 8px} .acts span{padding:10px 8px;color:var(--ink2);font-weight:600;font-size:13px}
+.cm{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--rule)} .cm .av{width:32px;height:32px;font-size:12px}
+.bub{background:var(--bg);border-radius:0 8px 8px 8px;padding:8px 12px;font-size:13px;flex:1} .bub a{color:var(--blue);word-break:break-all}
+</style></head><body>
+<p class="note">Mockup only: how your post could look in a feed. Real layout, fonts and counts will vary.</p>
+<div class="card">
+ <div class="hd"><div class="av">YN</div><div><div class="nm">Your name</div><div class="sub">Data &amp; AI | Microsoft ecosystem</div><div class="sub">1h · 🌐</div></div><span class="fol">+ Follow</span></div>
+ <div class="tx"><span>&quot;Copilot is the new operating system for work.&quot;<br><br>That was Microsoft's message at Ignite 2026 yesterday. I went through every Day 1 announcement so you don't have to. Here's the 2-minute version 👇</span><span id="rest" hidden><br><br>🔥 Best of Day 1<br>• Word, Excel and PowerPoint now open inside Copilot<br>• Ask Copilot on Windows to find files or fix your PC<br>• Copilot Code: describe an app or dashboard in plain English and it builds it<br>• Autopilot: an agent that handles recurring tasks while you work on something else<br>• Security agents that handle about 80% of a typical alert queue<br><br>📊 The reality check<br>I logged 34 headline announcements. Only 11 are available today.<br>Developers did best (6 of 12 live now). For everyday workers it's 2 of 11.<br>The biggest Copilot features will arrive over the coming months, not this week.<br><br>🔮 What it means for 2027<br>1. Copilot is becoming the operating system for work<br>2. Microsoft is building its own AI stack: its own models and chips<br>3. Agents are being managed like employees, with IDs, budgets and reviews<br>4. Copilot is opening up: Salesforce, ChatGPT and Claude connections<br>5. Trust is now part of the pitch<br><br>Which one would change your week the most? 👇<br><br>I'll post Day 2 to Day 4 updates as they land.<br><br><span class="tag">#MicrosoftIgnite</span> <span class="tag">#Copilot</span> <span class="tag">#AI</span> <span class="tag">#FutureOfWork</span> <span class="tag">#Microsoft</span></span> <button class="more" id="more">…more</button></div>
+ <div class="doc">
+  <div class="doc-hd"><span>Microsoft Ignite 2026: everything announced so far</span><span id="pg">1 / 9</span></div>
+  <img id="slide" src="slides/slide_01.png" alt="Carousel slide">
+  <button class="nav prev" id="prev" aria-label="Previous slide" disabled>‹</button>
+  <button class="nav next" id="next" aria-label="Next slide">›</button>
+  <div class="bar" id="bar" style="width:11%"></div>
+ </div>
+ <div class="stats"><span><span class="react"><i style="background:#378fe9"></i><i style="background:#5f9b41"></i><i style="background:#df704d"></i></span>Reactions</span><span>Comments · Reposts</span></div>
+ <div class="acts"><span>👍 Like</span><span>💬 Comment</span><span>🔁 Repost</span><span>➤ Send</span></div>
+ <div class="cm"><div class="av">YN</div><div class="bub"><b>Your name</b> · Author<br>Interactive roundup (filter by your role): &lt;your roundup link&gt;<br>Open dataset and code: <a href="https://github.com/Osman246/ignite-2026-roundup">github.com/Osman246/ignite-2026-roundup</a></div></div>
+</div>
+<script>
+let i=1;const n=9,img=document.getElementById('slide'),pg=document.getElementById('pg'),bar=document.getElementById('bar'),p=document.getElementById('prev'),x=document.getElementById('next');
+function go(d){i=Math.min(n,Math.max(1,i+d));img.src='slides/slide_'+String(i).padStart(2,'0')+'.png';pg.textContent=i+' / '+n;bar.style.width=(i/n*100)+'%';p.disabled=i===1;x.disabled=i===n;}
+p.onclick=()=>go(-1);x.onclick=()=>go(1);
+document.getElementById('more').onclick=e=>{document.getElementById('rest').hidden=false;e.target.remove();};
+</script></body></html>

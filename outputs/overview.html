@@ -1,0 +1,205 @@
+<meta charset="utf-8">
+<title>Ignite 2026 Overview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=DM+Mono:wght@500&display=swap">
+<style>
+/* Layout: a magazine feature. Dark keynote-stage hero, then an image-led "key moments" sequence (screenshot left, analysis right), then the wider-outlook essay in a 66ch column with role and timeline grids. */
+:root {
+  --bg: #f5f6f8;
+  --paper: #ffffff;
+  --ink: #0f1318;
+  --ink-2: #4a5160;
+  --muted: #7b8290;
+  --rule: #dde1e7;
+  --accent: #2a78d6;
+  --accent-ink: #1c5cab;
+  --accent-wash: #e7f0fc;
+  --stage: #0b0f1a;
+  --stage-ink: #f2f4f8;
+  --stage-ink-2: #b9c1d0;
+  --f-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1114; --paper: #161a1f; --ink: #eef1f4; --ink-2: #b3bac6; --muted: #8a919d; --rule: #29303a;
+    --accent: #5598e7; --accent-ink: #86b6ef; --accent-wash: #15253a; --stage: #05070c; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1114; --paper: #161a1f; --ink: #eef1f4; --ink-2: #b3bac6; --muted: #8a919d; --rule: #29303a;
+  --accent: #5598e7; --accent-ink: #86b6ef; --accent-wash: #15253a; --stage: #05070c; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16.5px/1.65 var(--f-body); }
+.gut { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1060px; margin: 0 auto; }
+p { margin: 0; max-width: 66ch; color: var(--ink-2); }
+a { color: var(--accent-ink); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+img { max-width: 100%; display: block; }
+.eyebrow { font: 500 12.5px/1.4 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+h1 { font: 800 clamp(36px, 6.6vw, 72px)/1 var(--f-display); letter-spacing: -.035em; margin: 0; text-wrap: balance; }
+h2 { font: 800 clamp(26px, 4vw, 40px)/1.05 var(--f-display); letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+h3 { font: 700 clamp(19px, 2.4vw, 23px)/1.2 var(--f-display); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+
+.hero { background: var(--stage); color: var(--stage-ink); padding-block: 48px 40px; }
+.hero .wrap { display: flex; flex-direction: column; gap: 22px; }
+.hero .eyebrow { color: #86b6ef; }
+.hero p { color: var(--stage-ink-2); font-size: 19px; }
+.hero figure { margin: 6px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.hero figure img { border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; width: 100%; }
+.hero figcaption, .credit { font: 500 11.5px/1.4 var(--f-mono); color: var(--muted); }
+.hero figcaption { color: #8b93a3; }
+
+main.wrap { display: flex; flex-direction: column; gap: 72px; padding-block: 56px 80px; }
+section { display: flex; flex-direction: column; gap: 20px; }
+.glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.glance div { padding: 18px 16px 18px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.glance div + div { padding-left: 16px; border-left: 1px solid var(--rule); }
+.glance b { font: 800 clamp(30px, 4.6vw, 42px)/1 var(--f-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.glance span { font-size: 13.5px; color: var(--ink-2); line-height: 1.4; }
+@media (max-width: 700px) { .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .glance div:nth-child(3) { padding-left: 0; border-left: 0; } .glance div:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+
+.moment { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; padding-top: 28px; border-top: 1px solid var(--rule); }
+.moment figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.moment figure img { border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; width: 100%; background: var(--stage); }
+.moment .txt { display: flex; flex-direction: column; gap: 12px; }
+.moment .t { font: 500 12px/1 var(--f-mono); color: var(--muted); letter-spacing: .04em; }
+.kv { display: flex; flex-direction: column; gap: 4px; }
+.kv .k { font: 500 11px/1.4 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.kv.mean { background: var(--accent-wash); border-radius: 10px; padding: 12px 14px; }
+.kv.mean .k { color: var(--accent-ink); }
+.kv.mean p { color: var(--ink); }
+@media (max-width: 760px) { .moment { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+
+.thesis { font: 700 clamp(22px, 3vw, 30px)/1.3 var(--f-display); letter-spacing: -.015em; max-width: 34ch; color: var(--ink); text-wrap: balance; }
+.forces { display: flex; flex-direction: column; border-top: 2px solid var(--ink); }
+.force { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 26px 0; border-bottom: 1px solid var(--rule); }
+.force .n { font: 800 40px/1 var(--f-display); color: var(--accent); }
+.force .body { display: flex; flex-direction: column; gap: 12px; }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.trio .kv p { font-size: 15px; }
+@media (max-width: 760px) { .trio { grid-template-columns: minmax(0, 1fr); } }
+
+.roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.role { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.role h3 { font-size: 19px; }
+.role p { font-size: 15px; }
+.skill { font: 500 12.5px/1.4 var(--f-mono); color: var(--accent-ink); background: var(--accent-wash); border-radius: 6px; padding: 6px 9px; align-self: flex-start; }
+
+.timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
+.timeline div { padding: 16px 16px 0 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.timeline div + div { padding-left: 16px; border-left: 1px solid var(--rule); }
+.timeline b { font: 800 20px/1.1 var(--f-display); }
+.timeline span { font-size: 14px; color: var(--ink-2); }
+@media (max-width: 760px) { .timeline { grid-template-columns: minmax(0, 1fr); } .timeline div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); padding-top: 14px; } .timeline div { padding-bottom: 14px; } }
+
+.bottom { background: var(--stage); color: var(--stage-ink); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+.bottom .eyebrow { color: #86b6ef; }
+.bottom h2 { color: var(--stage-ink); max-width: 30ch; }
+.bottom p { color: var(--stage-ink-2); }
+.foot { border-top: 1px solid var(--rule); padding-top: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; }
+.foot ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; color: var(--ink-2); }
+</style>
+
+<div class="hero gut">
+  <div class="wrap">
+    <div class="eyebrow">Microsoft Ignite 2026 &middot; San Francisco &middot; Overview so far</div>
+    <h1>The day Microsoft started selling an AI workforce</h1>
+    <p id="thesis-hero"></p>
+    <figure id="hero-fig"></figure>
+  </div>
+</div>
+
+<main class="wrap gut">
+  <section>
+    <div class="eyebrow">Day 1 at a glance</div>
+    <div class="glance" id="glance"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Key moments from the keynote</div>
+    <h2>What Microsoft showed on stage, and why it matters</h2>
+    <div id="moments" style="display:flex;flex-direction:column;gap:32px"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">The wider picture</div>
+    <h2>Five forces that will shape work in 2027</h2>
+    <p class="thesis" id="thesis"></p>
+    <p>Ignite is one company's event, but the direction it points to is industry-wide. For each force: what Microsoft announced, what's happening beyond Microsoft, and what it means for you.</p>
+    <div class="forces" id="forces"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Professional relevance</div>
+    <h2>What it means for your role</h2>
+    <div class="roles" id="roles"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">What happens next</div>
+    <h2>The road from announcement to your desk</h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <div class="bottom">
+    <div class="eyebrow">The bottom line</div>
+    <h2 id="bottom"></h2>
+    <p>Which of these shifts will change your job first? That's the question I'll be watching through Days 2 to 4.</p>
+  </div>
+
+  <div class="foot">
+    <strong>Sources, method and image credits</strong>
+    <ul id="srcs"></ul>
+    <p>Keynote images are stills from Microsoft's official Ignite 2026 keynote replay, © Microsoft, used here for commentary. They are not covered by this project's open licence. The analysis and "what it means" sections are my own views. Figures marked as keynote coverage come from press reports.</p>
+  </div>
+</main>
+
+<script>
+const D = {"ann": {"date": "17 November 2026", "sources": [["Microsoft Ignite 2026 Book of News", "https://news.microsoft.com/events/ignite/2026/book-of-news/"], ["Microsoft Source: Ignite 2026 overview", "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/"], ["Ignite 2026 live news", "https://news.microsoft.com/events/ignite/2026/live-news/"], ["Technology Record: keynote coverage", "https://www.technologyrecord.com/article/microsoft-ignite-2026-satya-nadella-predicts-rise-of-the-software-factory"], ["Windows Forum: keynote explained", "https://windowsforum.com/news/microsoft-ignite-2026-keynote-copilot-agents-ai-security-and-azure-launches-explained.452746/"]], "numbers": [["50M+", "agents registered in Agent 365", "Keynote, per press coverage"], ["330,000+", "Volkswagen Group employees equipped with Copilot", "Microsoft"], ["350+", "third-party connectors in Microsoft IQ", "Microsoft"], ["11,000+", "AI models in Microsoft Foundry", "Book of News"], ["100,000+", "apps built with Rayfin since preview", "Book of News"], ["~80%", "of a typical security alert queue handled by Perception's triage agent", "Book of News"]], "items": [{"name": "Office in Copilot", "cat": "Copilot at work", "what": "Create and edit Word, Excel and PowerPoint files from inside Copilot. Files save to OneDrive with your usual permissions and labels.", "status": "now", "label": "Available now", "who": ["everyone"], "top": true}, {"name": "Copilot on Windows: files and PC fixes", "cat": "Copilot at work", "what": "Ask Copilot to find, move or rename files, or to diagnose a PC problem. Arrives on Copilot+ PCs first.", "status": "preview", "label": "Preview", "who": ["everyone", "it"], "top": true}, {"name": "Copilot Code", "cat": "Copilot at work", "what": "Describe a dashboard, tracker or small app in plain English and Copilot builds it. Full release planned for December.", "status": "early", "label": "Early access", "who": ["everyone", "data", "dev"], "top": true}, {"name": "Autopilot", "cat": "Copilot at work", "what": "A long-running personal agent that handles recurring tasks. You can @mention it in Teams chats and channels.", "status": "early", "label": "Early access", "who": ["everyone"], "top": true}, {"name": "Copilot Workspaces", "cat": "Copilot at work", "what": "A shared space where a team and its agents work on the same project together.", "status": "early", "label": "Early access", "who": ["everyone", "leaders"]}, {"name": "Copilot Home", "cat": "Copilot at work", "what": "A start page that suggests what to work on next and opens the right agent for the job.", "status": "now", "label": "Rolling out", "who": ["everyone"]}, {"name": "Today (Brief and Feed)", "cat": "Copilot at work", "what": "A daily briefing in Outlook and the Copilot app. The Brief is included with Copilot; the live Feed uses Copilot Credits.", "status": "early", "label": "Private preview", "who": ["everyone"]}, {"name": "Fabric IQ in Excel", "cat": "Copilot at work", "what": "Ask questions of your company's governed data and build live PivotTables without leaving Excel.", "status": "preview", "label": "Preview", "who": ["data", "everyone"]}, {"name": "Salesforce in Copilot", "cat": "Copilot at work", "what": "More than 38 ready-made sales skills that work on your Salesforce data inside Copilot. A Sales Cloud view in Teams is in pilot.", "status": "preview", "label": "Preview", "who": ["leaders", "everyone"]}, {"name": "Dynamics 365 Sales and ERP plugins", "cat": "Copilot at work", "what": "Bring CRM and finance data into Copilot, Excel and PowerPoint, for example refreshing a customer deck automatically.", "status": "now", "label": "Available now", "who": ["leaders"]}, {"name": "Agent 365 Business Analytics", "cat": "Managing agents", "what": "A view of AI costs against results: task success rate, user satisfaction and hours of work assisted.", "status": "early", "label": "Early access", "who": ["leaders", "it"]}, {"name": "Agent 365 Cost Management", "cat": "Managing agents", "what": "See what is driving AI spend, set spending policies and get alerts before budgets are blown.", "status": "preview", "label": "Preview", "who": ["leaders", "it"]}, {"name": "Microsoft IQ", "cat": "Managing agents", "what": "The context layer under Copilot, now open as a platform. Pulls from Microsoft 365, Fabric and 350+ outside tools.", "status": "now", "label": "Available now", "who": ["it", "data", "dev"]}, {"name": "Windows agent protections", "cat": "Managing agents", "what": "Agents on PCs run in isolated containers, get their own identity, and follow company policies.", "status": "announced", "label": "Announced", "who": ["it"]}, {"name": "Microsoft Perception", "cat": "Security", "what": "Teams of security agents that find, defend against and fix vulnerabilities. Its triage agent handles about 80% of a typical alert queue.", "status": "now", "label": "Available now", "who": ["it"], "top": true}, {"name": "Entra Agent ID", "cat": "Security", "what": "Every AI agent gets an identity and access rules, the same way employees do.", "status": "preview", "label": "Preview", "who": ["it"]}, {"name": "Purview protection for Copilot", "cat": "Security", "what": "Stops Copilot from using sensitive files, even ones nobody has labelled, including files attached to prompts.", "status": "preview", "label": "Preview", "who": ["it", "leaders"]}, {"name": "Codename MDASH", "cat": "Security", "what": "More than 100 specialised agents that hunt for and confirm vulnerabilities in code.", "status": "preview", "label": "Preview", "who": ["it", "dev"]}, {"name": "Edge for Business: managed agent browsing", "cat": "Security", "what": "Controls for AI agents that browse the web for you, plus a skills recorder that turns a browser task into a reusable skill.", "status": "preview", "label": "Preview", "who": ["it", "everyone"]}, {"name": "AI Transparency Initiative", "cat": "Security", "what": "An industry effort to agree on an open, common approach to AI transparency, security and governance.", "status": "announced", "label": "Announced", "who": ["leaders"]}, {"name": "MAI-Code-2 and MAI-Code-2-Flash", "cat": "Models and developers", "what": "Microsoft's own coding models, pitched at frontier quality for a fraction of the cost. Live in GitHub today.", "status": "now", "label": "Available now", "who": ["dev"], "top": true}, {"name": "MAI-Cyber-2-Flash", "cat": "Models and developers", "what": "A compact security model (12 billion active parameters) that powers parts of Perception.", "status": "preview", "label": "Preview", "who": ["it", "dev"]}, {"name": "Microsoft-Decision-1.1", "cat": "Models and developers", "what": "A fast, low-cost model for routing and classification, available in Foundry, OpenRouter and Vercel.", "status": "now", "label": "Available now", "who": ["dev"]}, {"name": "MAI-Image-2.7", "cat": "Models and developers", "what": "Microsoft's latest image-generation model, with a faster Flash version.", "status": "preview", "label": "Preview", "who": ["dev", "everyone"]}, {"name": "Foundry adds GPT-6.2 and Meta models", "cat": "Models and developers", "what": "Foundry already lists more than 11,000 models. Nadella said OpenAI's GPT-6.2 and Meta's latest models are coming.", "status": "announced", "label": "Coming", "who": ["dev", "data"]}, {"name": "Copilot SDK 2.0", "cat": "Models and developers", "what": "Build products on the same agent engine behind Copilot. Runs on Rust and supports six programming languages.", "status": "now", "label": "Available now", "who": ["dev"]}, {"name": "GitHub Copilot app and code review", "cat": "Models and developers", "what": "Azure DevOps repos from clone to merge, secret detection and smarter, adjustable code reviews.", "status": "announced", "label": "Announced", "who": ["dev"]}, {"name": "Maia 300 AI chip", "cat": "Cloud and data", "what": "Microsoft's in-house AI chip. Nadella said it delivers 40% more tokens per watt than leading GPU systems.", "status": "announced", "label": "Announced", "who": ["leaders", "it"]}, {"name": "Cobalt 200 virtual machines", "cat": "Cloud and data", "what": "Cloud servers on Microsoft's own Arm chip, up to 50% faster than the last generation, in 20+ regions by year end.", "status": "now", "label": "Available now", "who": ["it", "dev"]}, {"name": "Azure HorizonDB", "cat": "Cloud and data", "what": "A managed PostgreSQL-compatible database with built-in AI functions and mirroring into Fabric.", "status": "now", "label": "Available now", "who": ["data", "dev"]}, {"name": "Power BI custom data apps", "cat": "Cloud and data", "what": "Turn a Power BI semantic model into a custom app, built in Power BI Desktop.", "status": "preview", "label": "Preview", "who": ["data"]}, {"name": "Database agents for SQL and PostgreSQL", "cat": "Cloud and data", "what": "Agents that help manage and tune databases from the new Database Hub in Fabric.", "status": "preview", "label": "Preview", "who": ["data", "it"]}, {"name": "Cloud PCs for AI work", "cat": "Cloud and data", "what": "Windows 365 Cloud PCs with up to 32 vCPUs and GPUs for heavier AI workloads.", "status": "now", "label": "Available now", "who": ["it"]}, {"name": "Windows Server 2028", "cat": "Cloud and data", "what": "Post-quantum cryptography, faster storage and support for running AI on your own servers.", "status": "preview", "label": "Preview", "who": ["it"]}], "takeaways": [{"title": "Copilot is becoming the operating system for work", "body": "Microsoft now calls Copilot the new operating system for work, built around four modes: Chat, Cowork, Code and Autopilot. Word, Excel and PowerPoint open inside it. Over the next year, the skill that matters shifts from knowing your way around Office to directing agents well."}, {"title": "Microsoft is building its own AI stack", "body": "It announced its own coding, security, image and decision models (MAI) and its own chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry. Expect more choice and lower prices, and less dependence on any single AI lab."}, {"title": "Agents are being managed like employees", "body": "Agents now get an identity (Entra Agent ID), a budget (Cost Management), performance reviews (Business Analytics) and security cover (Perception). Managing a mixed team of people and agents is turning into an everyday management skill."}, {"title": "Copilot is opening up to other vendors' tools", "body": "Salesforce runs inside Copilot. Fabric data can be used in ChatGPT and Claude. Microsoft IQ has 350+ connectors. Microsoft is betting that being the place where work happens matters more than owning every tool."}, {"title": "Trust is now part of the pitch", "body": "The AI Transparency Initiative, Purview controls for Copilot, and a public acknowledgement of last week's outage all point the same way. Microsoft knows big customers will only hand work to agents they can audit and control."}], "watch": ["Copilot Code reaching general availability in December, the first chance for most people to build their own apps by describing them.", "Pricing for the MAI models and Maia-powered capacity, which wasn't given today.", "How quickly Frontier features like Autopilot and Workspaces move to general availability.", "Days 2 to 4 of Ignite: deeper sessions on agents, security and Fabric."]}, "outlook": {"thesis": "Ignite 2026 marks the point where Microsoft stopped selling AI as a feature inside its apps and started selling it as a workforce: agents that do the work, sit in Copilot, and are managed, secured and paid for like staff.", "forces": [{"title": "Work moves from doing to directing", "evidence": "Copilot now has four modes: Chat, Cowork, Code and Autopilot. Word, Excel and PowerPoint open inside it, and Autopilot works on recurring tasks on its own.", "beyond": "Google, Salesforce and OpenAI are all pushing in the same direction. The interface to work is becoming a conversation with agents, not a set of apps.", "so_what": "The most valuable skill becomes writing a clear brief, checking an agent's output and knowing when to step in."}, {"title": "AI becomes a line item to manage, not a pilot to try", "evidence": "Agent 365 adds cost management, spending policies and business analytics (success rate, hours assisted). More features are billed in Copilot Credits.", "beyond": "Microsoft's own materials cite McKinsey: 93% of organisations have gone over their AI budgets. Finance teams will treat AI like cloud spending: variable, forecast and capped.", "so_what": "Being able to show the return on an AI rollout, in hours saved and work completed, is becoming a core skill for managers."}, {"title": "The AI stack is being rebuilt, and getting cheaper", "evidence": "Microsoft launched its own models (MAI-Code-2, MAI-Cyber-2-Flash, MAI-Image-2.7, Microsoft-Decision-1.1) and chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry.", "beyond": "Every major cloud now designs its own chips and models. Competition at every layer pushes the cost of a given level of AI down year after year.", "so_what": "Use cases that were too expensive in 2025 become affordable in 2027. Choosing the right model for each job becomes a routine decision, much like choosing the right database."}, {"title": "Copilot connects to other vendors' tools", "evidence": "Salesforce now runs inside Copilot. Fabric data can be used in ChatGPT and Claude. Microsoft IQ has 350+ connectors, and Entra's MCP Server for Enterprise is generally available.", "beyond": "Open standards like MCP (Model Context Protocol) are becoming the plumbing that lets agents work across vendors. Lock-in shifts from owning the tools to being the place where work starts.", "so_what": "Knowing how your company's systems connect (CRM, ERP, data platform, identity) matters more than mastering any single product."}, {"title": "Trust decides how far agents can go", "evidence": "Agents get identities (Entra Agent ID), data guardrails (Purview), threat protection (Defender) and their own security agents (Perception). Microsoft also launched an AI Transparency Initiative and acknowledged last week's outage on stage.", "beyond": "AI rules such as the EU AI Act are phasing in, and boards are asking who is accountable when an agent gets something wrong.", "so_what": "AI governance, risk and security roles grow fast. Everyone else will need to understand what their agents can access and do."}], "roles": [{"role": "Business leaders", "change": "AI moves from innovation budget to operating budget, with ROI dashboards attached.", "skill": "Setting AI KPIs and owning AI spend"}, {"role": "Managers", "change": "Your team will include agents. Work gets split between people and agents.", "skill": "Redesigning workflows and reviewing agent output"}, {"role": "IT and security", "change": "Every agent needs an identity, permissions and monitoring, just like a new hire.", "skill": "Agent identity, data governance and AI security"}, {"role": "Data and analytics", "change": "Fabric and Power BI semantic models become the context that Copilot and other assistants rely on.", "skill": "Building trusted semantic models and data products"}, {"role": "Developers", "change": "Coding agents handle more routine work. The job shifts towards architecture, review and building agents.", "skill": "Agent frameworks (Copilot SDK, Foundry) and evaluating AI output"}, {"role": "Everyone at work", "change": "Copilot becomes the first screen of the day, with a briefing, drafts and tasks handed to Autopilot.", "skill": "Writing clear briefs and checking AI output critically"}], "timeline": [["Now", "Office in Copilot, Microsoft IQ, Perception, MAI-Code-2 in GitHub, Cobalt 200, HorizonDB are generally available"], ["December 2026", "Copilot Code planned for general availability"], ["Early 2027", "Perception AI Readiness in preview (January), GPU Cloud PCs for 4K streaming in preview"], ["2027", "Frontier features (Autopilot, Workspaces, Agent 365 Business Analytics) expected to roll out more widely"]], "bottom_line": "The question for 2027 isn't whether to use AI at work. It's how many of your team's tasks you hand to agents, who manages those agents, and how you prove they're worth it."}, "moments": {"credit": "Stills from Microsoft's official Ignite 2026 keynote replay (17 Nov 2026), \u00a9 Microsoft. Used for commentary.", "hero": {"img": "img/keynote_three_pillars.jpg", "alt": "Satya Nadella on the Ignite stage under three panels reading 'Where you build', 'Where your data lives' and 'Where your agents go to work'", "caption": "Satya Nadella frames Microsoft's AI platform: where you build, where your data lives, and where your agents go to work"}, "items": [{"img": "img/keynote_copilot_app.jpg", "time": "1:12", "alt": "Copilot app demo with Work IQ, Salesforce, Outlook and Teams plugins, drafting and sending a Teams message about a stalled deal", "title": "Copilot becomes the place work starts", "what": "The demo ran entirely inside the Copilot app. It used Work IQ to find the biggest stalled deal, pulled context from Salesforce and Outlook, then drafted and sent a Teams message, all from one conversation.", "means": "The app you open first in the morning changes. Instead of switching between CRM, email and chat, you describe the outcome and Copilot works across the tools. Microsoft now calls this the new operating system for work."}, {"img": "img/keynote_autopilot.jpg", "time": "1:04", "alt": "Autopilot demo: a user asks Copilot to track client outreach and draft follow-ups for approval, with a timeline of completed tasks", "title": "Autopilot: an agent that keeps working", "what": "A user asks Copilot to track three clients, draft follow-ups when someone goes quiet for a week, and send a weekly performance update. The timeline shows Autopilot preparing meeting briefs and logging client conversations in Dynamics 365, each one reviewed by the user.", "means": "This is delegation rather than assistance: you set a standing instruction and approve the results. Expect job descriptions to start including how well you brief and supervise agents."}, {"img": "img/keynote_copilot_demo.jpg", "time": "0:40", "alt": "On-stage Copilot demo in which Copilot reasons for over a minute and saves a keynote outline as a Word document to OneDrive", "title": "Office documents become an output of a conversation", "what": "On stage, Copilot reasoned for over a minute, mapped a set of topics to a keynote structure, and saved the result as a Word document in OneDrive. That is Office in Copilot, now generally available.", "means": "First drafts take minutes, not hours. The value moves to the brief you give and the judgement you apply to the draft, which is where professionals can still stand out."}, {"img": "img/keynote_decision_model.jpg", "time": "0:16", "alt": "Chart comparing decision models on score versus speed, showing Microsoft Decision 1.1 six points higher and 2.2 times faster than version 1", "title": "Microsoft's own models go head to head", "what": "Microsoft-Decision-1.1 was shown scoring six points higher and running 2.2 times faster than its predecessor on the Artificial Analysis decision index. It's one of a new family of in-house MAI models for code, security, images and decisions.", "means": "Microsoft is reducing its reliance on any single AI lab. More competition between models generally means lower prices and faster responses for the AI built into the tools you use."}, {"img": "img/keynote_transparency.jpg", "time": "0:28", "alt": "Satya Nadella on stage in front of a slide introducing the AI Transparency Initiative", "title": "Trust gets its own slide", "what": "Nadella introduced the AI Transparency Initiative, an industry effort towards a common approach to AI transparency, security and governance. Copilot, IQ, Perception, Azure and Microsoft's MAI models are named as part of Microsoft's commitment.", "means": "As agents take on real work, companies will only scale them if they can audit what the agents did. Governance is becoming a selling point, and a career path."}, {"img": "img/keynote_community_plan.jpg", "time": "0:30", "alt": "Slide titled 'Our community-first AI infrastructure plan' with five commitments on electricity prices, water, jobs, tax base and local AI training", "title": "AI's physical footprint is now a keynote topic", "what": "Microsoft set out a community-first data centre plan: pay its way so data centres don't raise local electricity prices, use less water and replenish more than it uses, create local jobs, add to the tax base, and invest in local AI training.", "means": "Building data centres for AI now depends on public approval as much as technology. Energy, sustainability and local-policy expertise are becoming part of the AI story, which opens doors well beyond tech roles."}]}, "summary": {"total": 34, "by_status": {"now": 11, "preview": 13, "early": 5, "announced": 5}, "share_available_now": 0.324, "by_category": {"Copilot at work": {"now": 3, "preview": 3, "early": 4, "announced": 0}, "Cloud and data": {"now": 3, "preview": 3, "early": 0, "announced": 1}, "Models and developers": {"now": 3, "preview": 2, "early": 0, "announced": 2}, "Security": {"now": 1, "preview": 4, "early": 0, "announced": 1}, "Managing agents": {"now": 1, "preview": 1, "early": 1, "announced": 1}}, "by_audience": {"it": {"total": 16, "now": 4}, "dev": {"total": 12, "now": 6}, "everyone": {"total": 11, "now": 2}, "leaders": {"total": 8, "now": 1}, "data": {"total": 7, "now": 2}}}};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const O = D.outlook, S = D.summary, M = D.moments;
+document.getElementById('thesis-hero').textContent = O.thesis;
+document.getElementById('thesis').textContent = O.thesis;
+const hero = M.hero;
+document.getElementById('hero-fig').innerHTML = `<img src="${hero.img}" alt="${esc(hero.alt)}"><figcaption>${esc(hero.caption)} · Image: Microsoft Ignite 2026 keynote</figcaption>`;
+
+const glance = [
+  [S.total, 'headline announcements logged'],
+  [S.by_status.now, 'available to use today'],
+  [D.ann.numbers[0][0], D.ann.numbers[0][1] + ' (per keynote coverage)'],
+  [D.ann.numbers[1][0], D.ann.numbers[1][1]],
+];
+document.getElementById('glance').innerHTML = glance.map(([b, s]) => `<div><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('');
+
+document.getElementById('moments').innerHTML = M.items.map(m => `
+  <article class="moment">
+    <figure><img src="${m.img}" alt="${esc(m.alt)}" loading="lazy"><figcaption class="credit">Keynote, ${esc(m.time)} · Image: Microsoft Ignite 2026</figcaption></figure>
+    <div class="txt">
+      <h3>${esc(m.title)}</h3>
+      <div class="kv"><span class="k">What was announced</span><p>${esc(m.what)}</p></div>
+      <div class="kv mean"><span class="k">What it means</span><p>${esc(m.means)}</p></div>
+    </div>
+  </article>`).join('');
+
+document.getElementById('forces').innerHTML = O.forces.map((f, i) => `
+  <div class="force"><span class="n">${i + 1}</span><div class="body"><h3>${esc(f.title)}</h3>
+    <div class="trio">
+      <div class="kv"><span class="k">At Ignite</span><p>${esc(f.evidence)}</p></div>
+      <div class="kv"><span class="k">Beyond Microsoft</span><p>${esc(f.beyond)}</p></div>
+      <div class="kv mean"><span class="k">So what</span><p>${esc(f.so_what)}</p></div>
+    </div></div></div>`).join('');
+
+document.getElementById('roles').innerHTML = O.roles.map(r => `
+  <div class="role"><h3>${esc(r.role)}</h3><p>${esc(r.change)}</p><span class="skill">Skill to build: ${esc(r.skill)}</span></div>`).join('');
+document.getElementById('timeline').innerHTML = O.timeline.map(([w, t]) => `<div><b>${esc(w)}</b><span>${esc(t)}</span></div>`).join('');
+document.getElementById('bottom').textContent = O.bottom_line;
+document.getElementById('srcs').innerHTML = D.ann.sources.map(([n, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(n)}</a></li>`).join('') +
+  '<li><a href="https://news.microsoft.com/events/ignite/2026/live-news/" target="_blank" rel="noopener">Ignite 2026 keynote replay (Microsoft)</a></li>';
+</script>

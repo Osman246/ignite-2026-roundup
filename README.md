@@ -2,7 +2,22 @@
 
 **Everything Microsoft announced at Ignite 2026 so far, in plain English: the best announcements, what you can use today, and what it means for 2027.** It's built as an open dataset with an interactive page and a LinkedIn carousel.
 
-![Cover](outputs/slides/slide_01.png)
+| | |
+|---|---|
+| ![Overview cover](outputs/overview_slides/slide_01.png) | ![Key moment](outputs/overview_slides/slide_02.png) |
+
+## The overview: key moments from the keynote, and what they mean
+
+[`outputs/overview.html`](outputs/overview.html) is a visual overview built around stills from the keynote:
+
+- **Copilot becomes the place work starts.** One conversation spans Salesforce, Outlook and Teams.
+- **Autopilot keeps working.** You give it standing instructions and approve what it produces.
+- **Office documents come out of a conversation.** Office in Copilot is generally available.
+- **Microsoft's own models go head to head.** Microsoft-Decision-1.1 scores six points higher and runs 2.2x faster than version 1.
+- **Trust gets its own slide.** Microsoft announced the AI Transparency Initiative.
+- **AI's physical footprint becomes a keynote topic.** Microsoft set out a community-first data centre plan.
+
+It then zooms out to **five forces shaping work in 2027** and **the skill to build in each role**, with a [LinkedIn carousel](outputs/linkedin_overview_carousel.pdf) and [post copy](LINKEDIN_POST_OVERVIEW.md).
 
 ## Day 1 in four lines
 
@@ -40,6 +55,8 @@ data/announcements.csv    The same data, flat (generated)
 src/analyze.py            Summary stats + charts      -> outputs/summary.json, outputs/charts/
 src/build_page.py         Interactive roundup page    -> outputs/roundup.html
 src/carousel.py           LinkedIn carousel (1080x1350) -> outputs/linkedin_carousel.pdf, outputs/slides/
+src/build_overview.py     Visual overview page        -> outputs/overview.html (uses data/outlook.json, data/keynote_moments.json)
+src/overview_carousel.py  Overview carousel           -> outputs/linkedin_overview_carousel.pdf, outputs/overview_slides/
 LINKEDIN_POST.md          Post copy
 ```
 
@@ -64,4 +81,6 @@ To add Day 2 to Day 4, append items to `data/announcements.json` and rerun the t
 
 ## License
 
-Code: MIT. Dataset: CC BY 4.0. This is an independent analysis, not affiliated with Microsoft.
+Code: MIT. Dataset and analysis text: CC BY 4.0. This is an independent analysis, not affiliated with Microsoft.
+
+**Keynote images** in `outputs/img/` (and the slides that use them) are stills from Microsoft's official Ignite 2026 keynote replay, © Microsoft. They're used here for commentary and are **not** covered by the licences above.

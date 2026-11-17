@@ -1,0 +1,50 @@
+{
+  "thesis": "Ignite 2026 marks the point where Microsoft stopped selling AI as a feature inside its apps and started selling it as a workforce: agents that do the work, sit in Copilot, and are managed, secured and paid for like staff.",
+  "forces": [
+    {
+      "title": "Work moves from doing to directing",
+      "evidence": "Copilot now has four modes: Chat, Cowork, Code and Autopilot. Word, Excel and PowerPoint open inside it, and Autopilot works on recurring tasks on its own.",
+      "beyond": "Google, Salesforce and OpenAI are all pushing in the same direction. The interface to work is becoming a conversation with agents, not a set of apps.",
+      "so_what": "The most valuable skill becomes writing a clear brief, checking an agent's output and knowing when to step in."
+    },
+    {
+      "title": "AI becomes a line item to manage, not a pilot to try",
+      "evidence": "Agent 365 adds cost management, spending policies and business analytics (success rate, hours assisted). More features are billed in Copilot Credits.",
+      "beyond": "Microsoft's own materials cite McKinsey: 93% of organisations have gone over their AI budgets. Finance teams will treat AI like cloud spending: variable, forecast and capped.",
+      "so_what": "Being able to show the return on an AI rollout, in hours saved and work completed, is becoming a core skill for managers."
+    },
+    {
+      "title": "The AI stack is being rebuilt, and getting cheaper",
+      "evidence": "Microsoft launched its own models (MAI-Code-2, MAI-Cyber-2-Flash, MAI-Image-2.7, Microsoft-Decision-1.1) and chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry.",
+      "beyond": "Every major cloud now designs its own chips and models. Competition at every layer pushes the cost of a given level of AI down year after year.",
+      "so_what": "Use cases that were too expensive in 2025 become affordable in 2027. Choosing the right model for each job becomes a routine decision, much like choosing the right database."
+    },
+    {
+      "title": "Copilot connects to other vendors' tools",
+      "evidence": "Salesforce now runs inside Copilot. Fabric data can be used in ChatGPT and Claude. Microsoft IQ has 350+ connectors, and Entra's MCP Server for Enterprise is generally available.",
+      "beyond": "Open standards like MCP (Model Context Protocol) are becoming the plumbing that lets agents work across vendors. Lock-in shifts from owning the tools to being the place where work starts.",
+      "so_what": "Knowing how your company's systems connect (CRM, ERP, data platform, identity) matters more than mastering any single product."
+    },
+    {
+      "title": "Trust decides how far agents can go",
+      "evidence": "Agents get identities (Entra Agent ID), data guardrails (Purview), threat protection (Defender) and their own security agents (Perception). Microsoft also launched an AI Transparency Initiative and acknowledged last week's outage on stage.",
+      "beyond": "AI rules such as the EU AI Act are phasing in, and boards are asking who is accountable when an agent gets something wrong.",
+      "so_what": "AI governance, risk and security roles grow fast. Everyone else will need to understand what their agents can access and do."
+    }
+  ],
+  "roles": [
+    {"role": "Business leaders", "change": "AI moves from innovation budget to operating budget, with ROI dashboards attached.", "skill": "Setting AI KPIs and owning AI spend"},
+    {"role": "Managers", "change": "Your team will include agents. Work gets split between people and agents.", "skill": "Redesigning workflows and reviewing agent output"},
+    {"role": "IT and security", "change": "Every agent needs an identity, permissions and monitoring, just like a new hire.", "skill": "Agent identity, data governance and AI security"},
+    {"role": "Data and analytics", "change": "Fabric and Power BI semantic models become the context that Copilot and other assistants rely on.", "skill": "Building trusted semantic models and data products"},
+    {"role": "Developers", "change": "Coding agents handle more routine work. The job shifts towards architecture, review and building agents.", "skill": "Agent frameworks (Copilot SDK, Foundry) and evaluating AI output"},
+    {"role": "Everyone at work", "change": "Copilot becomes the first screen of the day, with a briefing, drafts and tasks handed to Autopilot.", "skill": "Writing clear briefs and checking AI output critically"}
+  ],
+  "timeline": [
+    ["Now", "Office in Copilot, Microsoft IQ, Perception, MAI-Code-2 in GitHub, Cobalt 200, HorizonDB are generally available"],
+    ["December 2026", "Copilot Code planned for general availability"],
+    ["Early 2027", "Perception AI Readiness in preview (January), GPU Cloud PCs for 4K streaming in preview"],
+    ["2027", "Frontier features (Autopilot, Workspaces, Agent 365 Business Analytics) expected to roll out more widely"]
+  ],
+  "bottom_line": "The question for 2027 isn't whether to use AI at work. It's how many of your team's tasks you hand to agents, who manages those agents, and how you prove they're worth it."
+}
