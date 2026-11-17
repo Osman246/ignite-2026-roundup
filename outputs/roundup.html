@@ -1,0 +1,249 @@
+<title>Ignite 2026 Roundup</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=DM+Mono:wght@500&display=swap">
+<style>
+/* Layout: an event "programme" — a bold masthead, a numbers ticker, then a filterable grid of announcement cards; single 1040px frame, reading text capped at 66ch. */
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --ink: #0f1318;
+  --ink-2: #4a5160;
+  --muted: #7b8290;
+  --rule: #dde1e7;
+  --accent: #2a78d6;
+  --accent-ink: #1c5cab;
+  --accent-wash: #e7f0fc;
+  --st-now: #1c5cab;
+  --st-preview: #3987e5;
+  --st-early: #86b6ef;
+  --st-ann: #c4d7ef;
+  --chip-on-ink: #ffffff;
+  --f-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1114; --card: #161a1f; --ink: #eef1f4; --ink-2: #b3bac6; --muted: #8a919d; --rule: #29303a;
+    --accent: #5598e7; --accent-ink: #86b6ef; --accent-wash: #15253a;
+    --st-now: #5598e7; --st-preview: #2a78d6; --st-early: #1c5cab; --st-ann: #2b3a4f; --chip-on-ink: #0e1114; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1114; --card: #161a1f; --ink: #eef1f4; --ink-2: #b3bac6; --muted: #8a919d; --rule: #29303a;
+  --accent: #5598e7; --accent-ink: #86b6ef; --accent-wash: #15253a;
+  --st-now: #5598e7; --st-preview: #2a78d6; --st-early: #1c5cab; --st-ann: #2b3a4f; --chip-on-ink: #0e1114; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 72px; }
+.wrap { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 60px; }
+p { margin: 0; max-width: 66ch; color: var(--ink-2); }
+a { color: var(--accent-ink); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.eyebrow { font: 500 12.5px/1.4 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+h1 { font: 800 clamp(40px, 8vw, 84px)/.95 var(--f-display); letter-spacing: -.035em; margin: 0; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--accent); }
+h2 { font: 800 clamp(26px, 4vw, 38px)/1.05 var(--f-display); letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+h3 { font: 600 18px/1.3 var(--f-display); letter-spacing: -.01em; margin: 0; }
+header { padding-top: 56px; display: flex; flex-direction: column; gap: 20px; }
+.lede { font-size: 19px; color: var(--ink); }
+.tldr { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.tldr div { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+.tldr b { display: block; color: var(--ink); font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+
+.ticker { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.tick { padding: 18px 16px 18px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.tick:nth-child(3n+2), .tick:nth-child(3n+3) { padding-left: 16px; border-left: 1px solid var(--rule); }
+.tick:nth-child(n+4) { border-top: 1px solid var(--rule); }
+.tick b { font: 800 clamp(30px, 5vw, 44px)/1 var(--f-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.tick span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.tick small { font: 500 11px/1.3 var(--f-mono); color: var(--muted); }
+@media (max-width: 640px) { .ticker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tick { padding-left: 0 !important; border-left: 0 !important; } .tick:nth-child(2n) { padding-left: 16px !important; border-left: 1px solid var(--rule) !important; }
+  .tick:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+
+section { display: flex; flex-direction: column; gap: 18px; }
+.best { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.best article { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.best .rank { font: 800 34px/1 var(--f-display); color: var(--accent); }
+.best p { font-size: 14.5px; }
+
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+@media (max-width: 760px) { .split { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.panel h3 { font-size: 17px; }
+.bars { display: flex; flex-direction: column; gap: 9px; }
+.bar { display: grid; grid-template-columns: 140px minmax(0, 1fr) 36px; gap: 10px; align-items: center; font-size: 13.5px; color: var(--ink-2); }
+.bar .track { height: 18px; display: flex; gap: 2px; }
+.bar .seg { height: 100%; border-radius: 3px; }
+.bar b { font: 500 13px/1 var(--f-mono); color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-2); }
+.key i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.note { font-size: 13.5px; color: var(--ink-2); }
+
+.controls { display: flex; flex-direction: column; gap: 10px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 12px; z-index: 5; border-bottom: 1px solid var(--rule); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chips .lab { font: 500 11.5px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-right: 4px; min-width: 64px; }
+button.chip { font: 500 14px/1 var(--f-body); color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 9px 14px; cursor: pointer; }
+button.chip:hover { border-color: var(--ink-2); }
+button.chip[aria-pressed="true"] { background: var(--ink); color: var(--chip-on-ink); border-color: var(--ink); }
+.count { font-size: 14px; color: var(--ink-2); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.card .meta { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.card .cat { font: 500 11.5px/1.2 var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.card p { font-size: 14.5px; line-height: 1.5; }
+.card .who { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+.card .who span { font-size: 12px; color: var(--ink-2); background: var(--bg); border-radius: 4px; padding: 3px 7px; }
+.card.top { border-color: var(--accent); }
+.status { font: 500 11px/1 var(--f-mono); letter-spacing: .04em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; color: var(--ink); background: var(--bg); }
+.status i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.empty { padding: 30px; text-align: center; color: var(--ink-2); background: var(--card); border: 1px dashed var(--rule); border-radius: 12px; }
+
+.takes { display: flex; flex-direction: column; border-top: 2px solid var(--ink); }
+.take { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 12px; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+.take .n { font: 800 36px/1 var(--f-display); color: var(--accent); }
+.take div { display: flex; flex-direction: column; gap: 8px; }
+.take h3 { font-size: clamp(19px, 2.6vw, 23px); font-weight: 800; }
+ul.watch { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--ink-2); max-width: 70ch; }
+.ask { background: var(--accent-wash); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.ask h2 { font-size: clamp(24px, 3.4vw, 32px); }
+.foot { border-top: 1px solid var(--rule); padding-top: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; color: var(--ink-2); }
+.foot ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Microsoft Ignite 2026 &middot; San Francisco &middot; Roundup so far, <span id="d"></span></div>
+    <h1>Copilot is the new <em>operating system</em> for work. Here's everything Microsoft announced.</h1>
+    <p class="lede">Ignite runs 17 to 20 November. Day 1 was about turning Copilot into the place where work happens, filling it with agents, and giving companies the controls to run those agents safely. Below: the headline announcements in plain English, what's live today, what's worth getting excited about, and what it all means for the year ahead.</p>
+    <div class="tldr" id="tldr"></div>
+  </header>
+
+  <div class="ticker" id="ticker" aria-label="Day 1 by the numbers"></div>
+
+  <section>
+    <div class="eyebrow">Best of Day 1</div>
+    <h2>The announcements worth getting excited about</h2>
+    <div class="best" id="best"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">The data</div>
+    <h2>Lots announced, much less you can use today</h2>
+    <p id="data-lede"></p>
+    <div class="split">
+      <div class="panel"><h3>Announcements by area and availability</h3><div class="key" id="key"></div><div class="bars" id="by-cat"></div></div>
+      <div class="panel"><h3>Who each announcement is for</h3><div class="key"><span><i style="background:var(--st-now)"></i>Available now</span><span><i style="background:var(--st-ann)"></i>Not yet available</span></div><div class="bars" id="by-who"></div>
+        <p class="note">Some announcements serve more than one group.</p></div>
+    </div>
+  </section>
+
+  <section id="explorer">
+    <div class="eyebrow">Explore every announcement</div>
+    <h2>Find what matters to you</h2>
+    <div class="controls">
+      <div class="chips" id="who-chips" role="group" aria-label="Filter by who it's for"><span class="lab">I'm in</span></div>
+      <div class="chips" id="status-chips" role="group" aria-label="Filter by availability"><span class="lab">Show</span></div>
+      <div class="count" id="count" aria-live="polite"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">What it means going forward</div>
+    <h2>Five shifts to plan for in 2027</h2>
+    <div class="takes" id="takes"></div>
+    <p class="note">These five shifts are my own analysis of the announcements, not Microsoft's.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">What to watch next</div>
+    <ul class="watch" id="watch"></ul>
+  </section>
+
+  <div class="ask">
+    <h2>Which one would change your week the most?</h2>
+    <p>Filter the list above by your role and pick one. That's the one to try first.</p>
+  </div>
+
+  <div class="foot">
+    <strong>Sources and method</strong>
+    <ul id="srcs"></ul>
+    <p>Announcements are curated from Microsoft's official Ignite materials. Availability labels follow Microsoft's wording: "Early access" covers the Frontier programme and private previews. Figures marked as keynote coverage come from press reports of Satya Nadella's keynote and haven't been confirmed in Microsoft's written materials. The dataset, analysis code and charts are open source in this project's GitHub repository.</p>
+  </div>
+</div>
+
+<script>
+const D = {"date": "17 November 2026", "sources": [["Microsoft Ignite 2026 Book of News", "https://news.microsoft.com/events/ignite/2026/book-of-news/"], ["Microsoft Source: Ignite 2026 overview", "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/"], ["Ignite 2026 live news", "https://news.microsoft.com/events/ignite/2026/live-news/"], ["Technology Record: keynote coverage", "https://www.technologyrecord.com/article/microsoft-ignite-2026-satya-nadella-predicts-rise-of-the-software-factory"], ["Windows Forum: keynote explained", "https://windowsforum.com/news/microsoft-ignite-2026-keynote-copilot-agents-ai-security-and-azure-launches-explained.452746/"]], "numbers": [["50M+", "agents registered in Agent 365", "Keynote, per press coverage"], ["330,000+", "Volkswagen Group employees equipped with Copilot", "Microsoft"], ["350+", "third-party connectors in Microsoft IQ", "Microsoft"], ["11,000+", "AI models in Microsoft Foundry", "Book of News"], ["100,000+", "apps built with Rayfin since preview", "Book of News"], ["~80%", "of a typical security alert queue handled by Perception's triage agent", "Book of News"]], "items": [{"name": "Office in Copilot", "cat": "Copilot at work", "what": "Create and edit Word, Excel and PowerPoint files from inside Copilot. Files save to OneDrive with your usual permissions and labels.", "status": "now", "label": "Available now", "who": ["everyone"], "top": true}, {"name": "Copilot on Windows: files and PC fixes", "cat": "Copilot at work", "what": "Ask Copilot to find, move or rename files, or to diagnose a PC problem. Arrives on Copilot+ PCs first.", "status": "preview", "label": "Preview", "who": ["everyone", "it"], "top": true}, {"name": "Copilot Code", "cat": "Copilot at work", "what": "Describe a dashboard, tracker or small app in plain English and Copilot builds it. Full release planned for December.", "status": "early", "label": "Early access", "who": ["everyone", "data", "dev"], "top": true}, {"name": "Autopilot", "cat": "Copilot at work", "what": "A long-running personal agent that handles recurring tasks. You can @mention it in Teams chats and channels.", "status": "early", "label": "Early access", "who": ["everyone"], "top": true}, {"name": "Copilot Workspaces", "cat": "Copilot at work", "what": "A shared space where a team and its agents work on the same project together.", "status": "early", "label": "Early access", "who": ["everyone", "leaders"]}, {"name": "Copilot Home", "cat": "Copilot at work", "what": "A start page that suggests what to work on next and opens the right agent for the job.", "status": "now", "label": "Rolling out", "who": ["everyone"]}, {"name": "Today (Brief and Feed)", "cat": "Copilot at work", "what": "A daily briefing in Outlook and the Copilot app. The Brief is included with Copilot; the live Feed uses Copilot Credits.", "status": "early", "label": "Private preview", "who": ["everyone"]}, {"name": "Fabric IQ in Excel", "cat": "Copilot at work", "what": "Ask questions of your company's governed data and build live PivotTables without leaving Excel.", "status": "preview", "label": "Preview", "who": ["data", "everyone"]}, {"name": "Salesforce in Copilot", "cat": "Copilot at work", "what": "More than 38 ready-made sales skills that work on your Salesforce data inside Copilot. A Sales Cloud view in Teams is in pilot.", "status": "preview", "label": "Preview", "who": ["leaders", "everyone"]}, {"name": "Dynamics 365 Sales and ERP plugins", "cat": "Copilot at work", "what": "Bring CRM and finance data into Copilot, Excel and PowerPoint, for example refreshing a customer deck automatically.", "status": "now", "label": "Available now", "who": ["leaders"]}, {"name": "Agent 365 Business Analytics", "cat": "Managing agents", "what": "A view of AI costs against results: task success rate, user satisfaction and hours of work assisted.", "status": "early", "label": "Early access", "who": ["leaders", "it"]}, {"name": "Agent 365 Cost Management", "cat": "Managing agents", "what": "See what is driving AI spend, set spending policies and get alerts before budgets are blown.", "status": "preview", "label": "Preview", "who": ["leaders", "it"]}, {"name": "Microsoft IQ", "cat": "Managing agents", "what": "The context layer under Copilot, now open as a platform. Pulls from Microsoft 365, Fabric and 350+ outside tools.", "status": "now", "label": "Available now", "who": ["it", "data", "dev"]}, {"name": "Windows agent protections", "cat": "Managing agents", "what": "Agents on PCs run in isolated containers, get their own identity, and follow company policies.", "status": "announced", "label": "Announced", "who": ["it"]}, {"name": "Microsoft Perception", "cat": "Security", "what": "Teams of security agents that find, defend against and fix vulnerabilities. Its triage agent handles about 80% of a typical alert queue.", "status": "now", "label": "Available now", "who": ["it"], "top": true}, {"name": "Entra Agent ID", "cat": "Security", "what": "Every AI agent gets an identity and access rules, the same way employees do.", "status": "preview", "label": "Preview", "who": ["it"]}, {"name": "Purview protection for Copilot", "cat": "Security", "what": "Stops Copilot from using sensitive files, even ones nobody has labelled, including files attached to prompts.", "status": "preview", "label": "Preview", "who": ["it", "leaders"]}, {"name": "Codename MDASH", "cat": "Security", "what": "More than 100 specialised agents that hunt for and confirm vulnerabilities in code.", "status": "preview", "label": "Preview", "who": ["it", "dev"]}, {"name": "Edge for Business: managed agent browsing", "cat": "Security", "what": "Controls for AI agents that browse the web for you, plus a skills recorder that turns a browser task into a reusable skill.", "status": "preview", "label": "Preview", "who": ["it", "everyone"]}, {"name": "AI Transparency Initiative", "cat": "Security", "what": "An industry effort to agree on an open, common approach to AI transparency, security and governance.", "status": "announced", "label": "Announced", "who": ["leaders"]}, {"name": "MAI-Code-2 and MAI-Code-2-Flash", "cat": "Models and developers", "what": "Microsoft's own coding models, pitched at frontier quality for a fraction of the cost. Live in GitHub today.", "status": "now", "label": "Available now", "who": ["dev"], "top": true}, {"name": "MAI-Cyber-2-Flash", "cat": "Models and developers", "what": "A compact security model (12 billion active parameters) that powers parts of Perception.", "status": "preview", "label": "Preview", "who": ["it", "dev"]}, {"name": "Microsoft-Decision-1.1", "cat": "Models and developers", "what": "A fast, low-cost model for routing and classification, available in Foundry, OpenRouter and Vercel.", "status": "now", "label": "Available now", "who": ["dev"]}, {"name": "MAI-Image-2.7", "cat": "Models and developers", "what": "Microsoft's latest image-generation model, with a faster Flash version.", "status": "preview", "label": "Preview", "who": ["dev", "everyone"]}, {"name": "Foundry adds GPT-6.2 and Meta models", "cat": "Models and developers", "what": "Foundry already lists more than 11,000 models. Nadella said OpenAI's GPT-6.2 and Meta's latest models are coming.", "status": "announced", "label": "Coming", "who": ["dev", "data"]}, {"name": "Copilot SDK 2.0", "cat": "Models and developers", "what": "Build products on the same agent engine behind Copilot. Runs on Rust and supports six programming languages.", "status": "now", "label": "Available now", "who": ["dev"]}, {"name": "GitHub Copilot app and code review", "cat": "Models and developers", "what": "Azure DevOps repos from clone to merge, secret detection and smarter, adjustable code reviews.", "status": "announced", "label": "Announced", "who": ["dev"]}, {"name": "Maia 300 AI chip", "cat": "Cloud and data", "what": "Microsoft's in-house AI chip. Nadella said it delivers 40% more tokens per watt than leading GPU systems.", "status": "announced", "label": "Announced", "who": ["leaders", "it"]}, {"name": "Cobalt 200 virtual machines", "cat": "Cloud and data", "what": "Cloud servers on Microsoft's own Arm chip, up to 50% faster than the last generation, in 20+ regions by year end.", "status": "now", "label": "Available now", "who": ["it", "dev"]}, {"name": "Azure HorizonDB", "cat": "Cloud and data", "what": "A managed PostgreSQL-compatible database with built-in AI functions and mirroring into Fabric.", "status": "now", "label": "Available now", "who": ["data", "dev"]}, {"name": "Power BI custom data apps", "cat": "Cloud and data", "what": "Turn a Power BI semantic model into a custom app, built in Power BI Desktop.", "status": "preview", "label": "Preview", "who": ["data"]}, {"name": "Database agents for SQL and PostgreSQL", "cat": "Cloud and data", "what": "Agents that help manage and tune databases from the new Database Hub in Fabric.", "status": "preview", "label": "Preview", "who": ["data", "it"]}, {"name": "Cloud PCs for AI work", "cat": "Cloud and data", "what": "Windows 365 Cloud PCs with up to 32 vCPUs and GPUs for heavier AI workloads.", "status": "now", "label": "Available now", "who": ["it"]}, {"name": "Windows Server 2028", "cat": "Cloud and data", "what": "Post-quantum cryptography, faster storage and support for running AI on your own servers.", "status": "preview", "label": "Preview", "who": ["it"]}], "takeaways": [{"title": "Copilot is becoming the operating system for work", "body": "Microsoft now calls Copilot the new operating system for work, built around four modes: Chat, Cowork, Code and Autopilot. Word, Excel and PowerPoint open inside it. Over the next year, the skill that matters shifts from knowing your way around Office to directing agents well."}, {"title": "Microsoft is building its own AI stack", "body": "It announced its own coding, security, image and decision models (MAI) and its own chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry. Expect more choice and lower prices, and less dependence on any single AI lab."}, {"title": "Agents are being managed like employees", "body": "Agents now get an identity (Entra Agent ID), a budget (Cost Management), performance reviews (Business Analytics) and security cover (Perception). Managing a mixed team of people and agents is turning into an everyday management skill."}, {"title": "Copilot is opening up to other vendors' tools", "body": "Salesforce runs inside Copilot. Fabric data can be used in ChatGPT and Claude. Microsoft IQ has 350+ connectors. Microsoft is betting that being the place where work happens matters more than owning every tool."}, {"title": "Trust is now part of the pitch", "body": "The AI Transparency Initiative, Purview controls for Copilot, and a public acknowledgement of last week's outage all point the same way. Microsoft knows big customers will only hand work to agents they can audit and control."}], "watch": ["Copilot Code reaching general availability in December, the first chance for most people to build their own apps by describing them.", "Pricing for the MAI models and Maia-powered capacity, which wasn't given today.", "How quickly Frontier features like Autopilot and Workspaces move to general availability.", "Days 2 to 4 of Ignite: deeper sessions on agents, security and Fabric."], "summary": {"total": 34, "by_status": {"now": 11, "preview": 13, "early": 5, "announced": 5}, "share_available_now": 0.324, "by_category": {"Copilot at work": {"now": 3, "preview": 3, "early": 4, "announced": 0}, "Cloud and data": {"now": 3, "preview": 3, "early": 0, "announced": 1}, "Models and developers": {"now": 3, "preview": 2, "early": 0, "announced": 2}, "Security": {"now": 1, "preview": 4, "early": 0, "announced": 1}, "Managing agents": {"now": 1, "preview": 1, "early": 1, "announced": 1}}, "by_audience": {"it": {"total": 16, "now": 4}, "dev": {"total": 12, "now": 6}, "everyone": {"total": 11, "now": 2}, "leaders": {"total": 8, "now": 1}, "data": {"total": 7, "now": 2}}}};
+const S = D.summary, items = D.items;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const ST = { now: ['Available now', 'var(--st-now)'], preview: ['Preview', 'var(--st-preview)'], early: ['Early access', 'var(--st-early)'], announced: ['Announced / coming', 'var(--st-ann)'] };
+const WHO = { everyone: 'Everyone at work', leaders: 'Business leaders', it: 'IT & security', dev: 'Developers', data: 'Data & analytics' };
+document.getElementById('d').textContent = D.date;
+
+document.getElementById('tldr').innerHTML = [
+  ['Copilot takes centre stage', 'Word, Excel and PowerPoint now open inside it, with agents that work on tasks for you.'],
+  ['Agents get managed', 'Agents get their own identities, budgets and performance tracking.'],
+  ["Microsoft's own AI", 'New MAI models for code, security and images, plus the Maia 300 chip.'],
+  ['Security first', 'Security agents that handle about 80% of a typical alert queue.'],
+].map(([b, t]) => `<div><b>${b}</b>${t}</div>`).join('');
+
+document.getElementById('ticker').innerHTML = D.numbers.map(([n, l, s]) =>
+  `<div class="tick"><b>${esc(n)}</b><span>${esc(l)}</span><small>${esc(s)}</small></div>`).join('');
+
+const statusPill = st => `<span class="status"><i style="background:${ST[st][1]}"></i>${ST[st][0]}</span>`;
+const topPicks = items.filter(i => i.top);
+document.getElementById("best").innerHTML = topPicks.map((t, i) => `
+  <article><div class="rank">${i + 1}</div><h3>${esc(t.name)}</h3><p>${esc(t.what)}</p><div>${statusPill(t.status)}</div></article>`).join('');
+
+const devNow = S.by_audience.dev, evNow = S.by_audience.everyone;
+document.getElementById('data-lede').innerHTML =
+  `I logged ${S.total} headline announcements from Day 1. <strong>${S.by_status.now} (${Math.round(S.share_available_now * 100)}%) are available today</strong>. The rest are in preview, early access or simply announced. Developers did best: ${devNow.now} of their ${devNow.total} announcements are live now. For everyday workers it's ${evNow.now} of ${evNow.total}, so the most exciting Copilot features will reach most people over the coming months, not this week.`;
+
+const order = ['now', 'preview', 'early', 'announced'];
+document.getElementById('key').innerHTML = order.map(s => `<span><i style="background:${ST[s][1]}"></i>${ST[s][0]}</span>`).join('');
+const cats = Object.entries(S.by_category), maxC = Math.max(...cats.map(([, v]) => order.reduce((a, s) => a + v[s], 0)));
+document.getElementById('by-cat').innerHTML = cats.map(([c, v]) => {
+  const tot = order.reduce((a, s) => a + v[s], 0);
+  return `<div class="bar"><span>${esc(c)}</span><div class="track" style="width:${tot / maxC * 100}%">${order.filter(s => v[s]).map(s =>
+    `<div class="seg" title="${ST[s][0]}: ${v[s]}" style="flex:${v[s]};background:${ST[s][1]}"></div>`).join('')}</div><b>${tot}</b></div>`; }).join('');
+const whos = Object.entries(S.by_audience), maxW = Math.max(...whos.map(([, v]) => v.total));
+document.getElementById('by-who').innerHTML = whos.map(([w, v]) =>
+  `<div class="bar"><span>${WHO[w]}</span><div class="track" style="width:${v.total / maxW * 100}%">${v.now ? `<div class="seg" title="Available now: ${v.now}" style="flex:${v.now};background:var(--st-now)"></div>` : ''}<div class="seg" title="Not yet available: ${v.total - v.now}" style="flex:${v.total - v.now};background:var(--st-ann)"></div></div><b>${v.now}/${v.total}</b></div>`).join('');
+
+/* explorer */
+const state = { who: 'all', status: 'all' };
+try { const saved = JSON.parse(localStorage.getItem('ignite-roundup-filters') || 'null'); if (saved) Object.assign(state, saved); } catch (e) {}
+function chips(id, key, opts) {
+  const host = document.getElementById(id);
+  opts.forEach(([v, l]) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.id = `chip-${key}-${v}`;
+    b.textContent = l; b.dataset.v = v; b.addEventListener('click', () => { state[key] = v; render(); }); host.appendChild(b); });
+}
+chips('who-chips', 'who', [['all', 'Show all'], ...Object.entries(WHO)]);
+chips('status-chips', 'status', [['all', 'Everything'], ['now', 'Available now'], ['preview', 'Preview'], ['early', 'Early access'], ['announced', 'Coming']]);
+function render() {
+  document.querySelectorAll('#who-chips .chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === state.who));
+  document.querySelectorAll('#status-chips .chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === state.status));
+  const list = items.filter(i => (state.who === 'all' || i.who.includes(state.who)) && (state.status === 'all' || i.status === state.status))
+    .sort((a, b) => (b.top === true) - (a.top === true) || order.indexOf(a.status) - order.indexOf(b.status));
+  document.getElementById('count').textContent = `${list.length} of ${items.length} announcements`;
+  document.getElementById('grid').innerHTML = list.length ? list.map(i => `
+    <article class="card${i.top ? ' top' : ''}">
+      <div class="meta"><span class="cat">${esc(i.cat)}${i.top ? ' · Top pick' : ''}</span>${statusPill(i.status)}</div>
+      <h3>${esc(i.name)}</h3><p>${esc(i.what)}</p>
+      <div class="who">${i.who.map(w => `<span>${WHO[w]}</span>`).join('')}</div>
+    </article>`).join('') : `<div class="empty">Nothing matches both filters yet. Try "Everything" or another role.</div>`;
+  try { localStorage.setItem('ignite-roundup-filters', JSON.stringify(state)); } catch (e) {}
+}
+render();
+
+document.getElementById('takes').innerHTML = D.takeaways.map((t, i) =>
+  `<div class="take"><span class="n">${i + 1}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.body)}</p></div></div>`).join('');
+document.getElementById('watch').innerHTML = D.watch.map(w => `<li>${esc(w)}</li>`).join('');
+document.getElementById('srcs').innerHTML = D.sources.map(([n, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(n)}</a></li>`).join('');
+</script>

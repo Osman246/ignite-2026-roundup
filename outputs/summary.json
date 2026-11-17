@@ -1,0 +1,64 @@
+{
+  "total": 34,
+  "by_status": {
+    "now": 11,
+    "preview": 13,
+    "early": 5,
+    "announced": 5
+  },
+  "share_available_now": 0.324,
+  "by_category": {
+    "Copilot at work": {
+      "now": 3,
+      "preview": 3,
+      "early": 4,
+      "announced": 0
+    },
+    "Cloud and data": {
+      "now": 3,
+      "preview": 3,
+      "early": 0,
+      "announced": 1
+    },
+    "Models and developers": {
+      "now": 3,
+      "preview": 2,
+      "early": 0,
+      "announced": 2
+    },
+    "Security": {
+      "now": 1,
+      "preview": 4,
+      "early": 0,
+      "announced": 1
+    },
+    "Managing agents": {
+      "now": 1,
+      "preview": 1,
+      "early": 1,
+      "announced": 1
+    }
+  },
+  "by_audience": {
+    "it": {
+      "total": 16,
+      "now": 4
+    },
+    "dev": {
+      "total": 12,
+      "now": 6
+    },
+    "everyone": {
+      "total": 11,
+      "now": 2
+    },
+    "leaders": {
+      "total": 8,
+      "now": 1
+    },
+    "data": {
+      "total": 7,
+      "now": 2
+    }
+  }
+}

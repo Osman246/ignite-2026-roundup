@@ -1,0 +1,35 @@
+name,cat,status,label,who,top,what
+Office in Copilot,Copilot at work,now,Available now,everyone,True,"Create and edit Word, Excel and PowerPoint files from inside Copilot. Files save to OneDrive with your usual permissions and labels."
+Copilot on Windows: files and PC fixes,Copilot at work,preview,Preview,everyone;it,True,"Ask Copilot to find, move or rename files, or to diagnose a PC problem. Arrives on Copilot+ PCs first."
+Copilot Code,Copilot at work,early,Early access,everyone;data;dev,True,"Describe a dashboard, tracker or small app in plain English and Copilot builds it. Full release planned for December."
+Autopilot,Copilot at work,early,Early access,everyone,True,A long-running personal agent that handles recurring tasks. You can @mention it in Teams chats and channels.
+Copilot Workspaces,Copilot at work,early,Early access,everyone;leaders,False,A shared space where a team and its agents work on the same project together.
+Copilot Home,Copilot at work,now,Rolling out,everyone,False,A start page that suggests what to work on next and opens the right agent for the job.
+Today (Brief and Feed),Copilot at work,early,Private preview,everyone,False,A daily briefing in Outlook and the Copilot app. The Brief is included with Copilot; the live Feed uses Copilot Credits.
+Fabric IQ in Excel,Copilot at work,preview,Preview,data;everyone,False,Ask questions of your company's governed data and build live PivotTables without leaving Excel.
+Salesforce in Copilot,Copilot at work,preview,Preview,leaders;everyone,False,More than 38 ready-made sales skills that work on your Salesforce data inside Copilot. A Sales Cloud view in Teams is in pilot.
+Dynamics 365 Sales and ERP plugins,Copilot at work,now,Available now,leaders,False,"Bring CRM and finance data into Copilot, Excel and PowerPoint, for example refreshing a customer deck automatically."
+Agent 365 Business Analytics,Managing agents,early,Early access,leaders;it,False,"A view of AI costs against results: task success rate, user satisfaction and hours of work assisted."
+Agent 365 Cost Management,Managing agents,preview,Preview,leaders;it,False,"See what is driving AI spend, set spending policies and get alerts before budgets are blown."
+Microsoft IQ,Managing agents,now,Available now,it;data;dev,False,"The context layer under Copilot, now open as a platform. Pulls from Microsoft 365, Fabric and 350+ outside tools."
+Windows agent protections,Managing agents,announced,Announced,it,False,"Agents on PCs run in isolated containers, get their own identity, and follow company policies."
+Microsoft Perception,Security,now,Available now,it,True,"Teams of security agents that find, defend against and fix vulnerabilities. Its triage agent handles about 80% of a typical alert queue."
+Entra Agent ID,Security,preview,Preview,it,False,"Every AI agent gets an identity and access rules, the same way employees do."
+Purview protection for Copilot,Security,preview,Preview,it;leaders,False,"Stops Copilot from using sensitive files, even ones nobody has labelled, including files attached to prompts."
+Codename MDASH,Security,preview,Preview,it;dev,False,More than 100 specialised agents that hunt for and confirm vulnerabilities in code.
+Edge for Business: managed agent browsing,Security,preview,Preview,it;everyone,False,"Controls for AI agents that browse the web for you, plus a skills recorder that turns a browser task into a reusable skill."
+AI Transparency Initiative,Security,announced,Announced,leaders,False,"An industry effort to agree on an open, common approach to AI transparency, security and governance."
+MAI-Code-2 and MAI-Code-2-Flash,Models and developers,now,Available now,dev,True,"Microsoft's own coding models, pitched at frontier quality for a fraction of the cost. Live in GitHub today."
+MAI-Cyber-2-Flash,Models and developers,preview,Preview,it;dev,False,A compact security model (12 billion active parameters) that powers parts of Perception.
+Microsoft-Decision-1.1,Models and developers,now,Available now,dev,False,"A fast, low-cost model for routing and classification, available in Foundry, OpenRouter and Vercel."
+MAI-Image-2.7,Models and developers,preview,Preview,dev;everyone,False,"Microsoft's latest image-generation model, with a faster Flash version."
+Foundry adds GPT-6.2 and Meta models,Models and developers,announced,Coming,dev;data,False,"Foundry already lists more than 11,000 models. Nadella said OpenAI's GPT-6.2 and Meta's latest models are coming."
+Copilot SDK 2.0,Models and developers,now,Available now,dev,False,Build products on the same agent engine behind Copilot. Runs on Rust and supports six programming languages.
+GitHub Copilot app and code review,Models and developers,announced,Announced,dev,False,"Azure DevOps repos from clone to merge, secret detection and smarter, adjustable code reviews."
+Maia 300 AI chip,Cloud and data,announced,Announced,leaders;it,False,Microsoft's in-house AI chip. Nadella said it delivers 40% more tokens per watt than leading GPU systems.
+Cobalt 200 virtual machines,Cloud and data,now,Available now,it;dev,False,"Cloud servers on Microsoft's own Arm chip, up to 50% faster than the last generation, in 20+ regions by year end."
+Azure HorizonDB,Cloud and data,now,Available now,data;dev,False,A managed PostgreSQL-compatible database with built-in AI functions and mirroring into Fabric.
+Power BI custom data apps,Cloud and data,preview,Preview,data,False,"Turn a Power BI semantic model into a custom app, built in Power BI Desktop."
+Database agents for SQL and PostgreSQL,Cloud and data,preview,Preview,data;it,False,Agents that help manage and tune databases from the new Database Hub in Fabric.
+Cloud PCs for AI work,Cloud and data,now,Available now,it,False,Windows 365 Cloud PCs with up to 32 vCPUs and GPUs for heavier AI workloads.
+Windows Server 2028,Cloud and data,preview,Preview,it,False,"Post-quantum cryptography, faster storage and support for running AI on your own servers."
