@@ -4,18 +4,19 @@
 
 | | |
 |---|---|
-| ![Overview cover](outputs/overview_slides/slide_01.png) | ![Key moment](outputs/overview_slides/slide_02.png) |
+| ![Overview cover](outputs/overview_slides/slide_01.png) | ![Key moment](outputs/overview_slides/slide_04.png) |
 
 ## The overview: key moments from the keynote, and what they mean
 
-[`outputs/overview.html`](outputs/overview.html) is a visual overview built around stills from the keynote:
+[`outputs/overview.html`](outputs/overview.html) is a visual overview built around high-resolution product screens from the keynote demos:
 
-- **Copilot becomes the place work starts.** One conversation spans Salesforce, Outlook and Teams.
-- **Autopilot keeps working.** You give it standing instructions and approve what it produces.
-- **Office documents come out of a conversation.** Office in Copilot is generally available.
-- **Microsoft's own models go head to head.** Microsoft-Decision-1.1 scores six points higher and runs 2.2x faster than version 1.
-- **Trust gets its own slide.** Microsoft announced the AI Transparency Initiative.
-- **AI's physical footprint becomes a keynote topic.** Microsoft set out a community-first data centre plan.
+- **Microsoft 365 Copilot + Work IQ:** runs a sales review across Salesforce, Outlook and Teams, showing every step it takes.
+- **Autopilot:** takes standing instructions and asks you to approve what it produces.
+- **Copilot on Windows (hybrid intelligence):** combines files on your PC with web search.
+- **Microsoft IQ business plugins:** packages company processes as reusable context for agents.
+- **Agent 365 Business Analytics:** shows cost, estimated AI value and assisted hours for each task.
+- **Microsoft 365 admin center:** finds and retires inactive agents (2,600 in the demo tenant).
+- **Microsoft Foundry fine-tuning:** in an Alaska Airlines demo on synthetic data, accuracy reached 97% at $2 a month, compared with $370.
 
 It then zooms out to **five forces shaping work in 2027** and **the skill to build in each role**, with a [LinkedIn carousel](outputs/linkedin_overview_carousel.pdf) and [post copy](LINKEDIN_POST_OVERVIEW.md).
 

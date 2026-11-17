@@ -123,8 +123,8 @@ section { display: flex; flex-direction: column; gap: 20px; }
   </section>
 
   <section>
-    <div class="eyebrow">Key moments from the keynote</div>
-    <h2>What Microsoft showed on stage, and why it matters</h2>
+    <div class="eyebrow">The products, up close</div>
+    <h2>What Microsoft demoed on stage, and what it means</h2>
     <div id="moments" style="display:flex;flex-direction:column;gap:32px"></div>
   </section>
 
@@ -182,6 +182,7 @@ document.getElementById('moments').innerHTML = M.items.map(m => `
   <article class="moment">
     <figure><img src="${m.img}" alt="${esc(m.alt)}" loading="lazy"><figcaption class="credit">Keynote, ${esc(m.time)} · Image: Microsoft Ignite 2026</figcaption></figure>
     <div class="txt">
+      <span class="t">${esc(m.product || "")}</span>
       <h3>${esc(m.title)}</h3>
       <div class="kv"><span class="k">What was announced</span><p>${esc(m.what)}</p></div>
       <div class="kv mean"><span class="k">What it means</span><p>${esc(m.means)}</p></div>

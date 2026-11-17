@@ -3,30 +3,28 @@
 **Format:** a document post. Upload `outputs/linkedin_overview_carousel.pdf` and give it the title "Ignite 2026: the day Microsoft started selling an AI workforce".
 **Timing:** post during Ignite week (17–20 Nov), on a weekday morning.
 **Links:** put the overview page and GitHub repo in the first comment.
-**Images:** the slides use stills from Microsoft's keynote replay, credited on each slide.
+**Images:** the slides use product screens from Microsoft's keynote demos, credited on each slide.
 
 ---
 
 Yesterday at Ignite, Microsoft stopped selling AI as a feature and started selling it as a workforce.
 
-I watched the keynote and pulled out the moments that matter for anyone who works in an office 👇
+I went through the keynote demos so you don't have to. Here's what the products actually do 👇
 
-🖥️ Copilot becomes the place work starts
-In one conversation, Copilot found a stalled deal, pulled context from Salesforce and Outlook, and sent a Teams message.
+📊 Copilot ran a full sales review on its own. It pulled the pipeline from Salesforce, flagged the deals at risk and drafted a Teams message, showing every step it took.
 
-🤖 Autopilot keeps working while you don't
-You give it a standing instruction, like "follow up if a client goes quiet", and approve what it produces.
+🤖 Autopilot takes standing instructions. "If a client hasn't replied in a week, draft a follow-up for me to approve."
 
-⚡ Microsoft's own models are getting faster and cheaper
-Its new decision model scored higher and ran 2.2x faster than the last one.
+💷 AI gets an ROI dashboard. Agent 365 shows the cost, estimated value and hours saved for each team and each task.
 
-🏗️ AI's physical footprint made the keynote
-Microsoft committed to data centres that pay their way, so local electricity prices don't go up.
+✈️ In an Alaska Airlines demo, a fine-tuned model was more accurate (97%) and cost $2 a month instead of $370.
 
-The wider picture for 2027:
+🧹 IT gets tools to find and retire unused agents. One demo tenant had 2,600 of them.
+
+What this means for 2027:
 1. Work moves from doing to directing
 2. AI becomes a line item to manage, not a pilot to try
-3. The AI stack gets cheaper every year
+3. Smaller models trained on your own data get cheaper and better
 4. Copilot connects to tools beyond Microsoft
 5. Trust decides how far agents can go
 
@@ -39,5 +37,5 @@ Which of these will change your job first? 👇
 ---
 
 **First comment:**
-Full visual overview, with keynote screenshots and what it means for your role: <your overview link>
+Full visual overview, with product screenshots and what it means for your role: <your overview link>
 Open data and code: https://github.com/Osman246/ignite-2026-roundup

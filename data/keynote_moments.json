@@ -1,5 +1,5 @@
 {
-  "credit": "Stills from Microsoft's official Ignite 2026 keynote replay (17 Nov 2026), © Microsoft. Used for commentary.",
+  "credit": "Stills from Microsoft's official Ignite 2026 keynote replay (17 Nov 2026), © Microsoft. Product screens are captured from the live demos. Used for commentary.",
   "hero": {
     "img": "img/keynote_three_pillars.jpg",
     "alt": "Satya Nadella on the Ignite stage under three panels reading 'Where you build', 'Where your data lives' and 'Where your agents go to work'",
@@ -7,46 +7,102 @@
   },
   "items": [
     {
-      "img": "img/keynote_copilot_app.jpg", "time": "1:12",
-      "alt": "Copilot app demo with Work IQ, Salesforce, Outlook and Teams plugins, drafting and sending a Teams message about a stalled deal",
-      "title": "Copilot becomes the place work starts",
-      "what": "The demo ran entirely inside the Copilot app. It used Work IQ to find the biggest stalled deal, pulled context from Salesforce and Outlook, then drafted and sent a Teams message, all from one conversation.",
-      "means": "The app you open first in the morning changes. Instead of switching between CRM, email and chat, you describe the outcome and Copilot works across the tools. Microsoft now calls this the new operating system for work."
+      "img": "img/product_copilot_workiq.jpg",
+      "time": "1:11",
+      "product": "Microsoft 365 Copilot · Work IQ",
+      "alt": "Copilot app showing an open pipeline chart by stage, at-risk opportunities, and a Workspace panel listing four completed steps using Salesforce, Outlook Mail and Teams plugins",
+      "title": "Copilot runs a sales review across three systems",
+      "what": "Asked to review the forecast, Copilot pulled the West region pipeline from Salesforce, compared it with last week, traced the change and flagged deals at risk. The Workspace panel shows each step and the plugins used (Salesforce, Outlook Mail and Teams). It then recommends reopening the biggest stalled deal and offers to message the account owner in Teams.",
+      "means": "This is what 'Copilot as the operating system for work' looks like in practice. The analysis a sales manager spends Monday morning assembling arrives as one answer, with its sources and steps shown, so you can check it before you act.",
+      "crop": [
+        0.2,
+        0.0,
+        0.8
+      ]
     },
     {
-      "img": "img/keynote_autopilot.jpg", "time": "1:04",
-      "alt": "Autopilot demo: a user asks Copilot to track client outreach and draft follow-ups for approval, with a timeline of completed tasks",
-      "title": "Autopilot: an agent that keeps working",
-      "what": "A user asks Copilot to track three clients, draft follow-ups when someone goes quiet for a week, and send a weekly performance update. The timeline shows Autopilot preparing meeting briefs and logging client conversations in Dynamics 365, each one reviewed by the user.",
-      "means": "This is delegation rather than assistance: you set a standing instruction and approve the results. Expect job descriptions to start including how well you brief and supervise agents."
+      "img": "img/product_autopilot.jpg",
+      "time": "1:04",
+      "product": "Copilot Autopilot",
+      "alt": "Autopilot start screen with a standing instruction to track client outreach and draft follow-ups, and a 'What's been happening' timeline of completed tasks",
+      "title": "Autopilot takes standing instructions",
+      "what": "The user sets one instruction: track fundraising outreach, client news and service cases for three clients, draft a follow-up if a client hasn't replied in a week, and bring a weekly performance summary. The timeline shows Autopilot sending a morning brief, preparing client-meeting briefs and logging conversations in Dynamics 365, each reviewed by the user.",
+      "means": "This is delegation rather than assistance: you set the rule once and approve the results. Briefing and supervising an agent becomes part of the job, much as delegating to a junior colleague is today.",
+      "crop": [
+        0.15,
+        0.0,
+        0.7
+      ]
     },
     {
-      "img": "img/keynote_copilot_demo.jpg", "time": "0:40",
-      "alt": "On-stage Copilot demo in which Copilot reasons for over a minute and saves a keynote outline as a Word document to OneDrive",
-      "title": "Office documents become an output of a conversation",
-      "what": "On stage, Copilot reasoned for over a minute, mapped a set of topics to a keynote structure, and saved the result as a Word document in OneDrive. That is Office in Copilot, now generally available.",
-      "means": "First drafts take minutes, not hours. The value moves to the brief you give and the judgement you apply to the draft, which is where professionals can still stand out."
+      "img": "img/product_hybrid_windows.jpg",
+      "time": "0:39",
+      "product": "Copilot on Windows · Hybrid intelligence",
+      "alt": "Copilot reasoning panel showing 'Using Hybrid Intelligence', checking files on the PC, then producing an overview of NRF 2027",
+      "title": "Copilot works with files on your own PC",
+      "what": "Asked for an overview of an upcoming retail conference, Copilot used 'Hybrid Intelligence' to search the web and check files stored locally on the PC, including a speaker-guidance PDF, before writing its answer.",
+      "means": "AI no longer needs everything uploaded to the cloud first. Combining local files with online sources makes Copilot useful for the documents that live on people's laptops, and it raises new questions for IT about what an assistant can read.",
+      "crop": [
+        0.05,
+        0.0,
+        0.85
+      ]
     },
     {
-      "img": "img/keynote_decision_model.jpg", "time": "0:16",
-      "alt": "Chart comparing decision models on score versus speed, showing Microsoft Decision 1.1 six points higher and 2.2 times faster than version 1",
-      "title": "Microsoft's own models go head to head",
-      "what": "Microsoft-Decision-1.1 was shown scoring six points higher and running 2.2 times faster than its predecessor on the Artificial Analysis decision index. It's one of a new family of in-house MAI models for code, security, images and decisions.",
-      "means": "Microsoft is reducing its reliance on any single AI lab. More competition between models generally means lower prices and faster responses for the AI built into the tools you use."
+      "img": "img/product_iq_plugins.jpg",
+      "time": "1:20",
+      "product": "Microsoft IQ · Business plugins",
+      "alt": "Microsoft IQ preview listing business plugins such as Retail Quote to Order, Month-End Close, Warranty and Returns and Supply Chain Operations, each with an owner and description",
+      "title": "Company know-how gets packaged as plugins",
+      "what": "Microsoft IQ shows a catalogue of business plugins for a demo company: Quote to Order, Month-End Close, Warranty and Returns, Supply Chain Operations and more. Each has a named owner and a description of the process and systems it covers, and some are marked 'Certified'.",
+      "means": "How your organisation actually works (who approves what, which system is the record) becomes a reusable asset that every agent can draw on. The people who document and own these processes become more valuable, not less.",
+      "crop": [
+        0.3,
+        0.0,
+        0.7
+      ]
     },
     {
-      "img": "img/keynote_transparency.jpg", "time": "0:28",
-      "alt": "Satya Nadella on stage in front of a slide introducing the AI Transparency Initiative",
-      "title": "Trust gets its own slide",
-      "what": "Nadella introduced the AI Transparency Initiative, an industry effort towards a common approach to AI transparency, security and governance. Copilot, IQ, Perception, Azure and Microsoft's MAI models are named as part of Microsoft's commitment.",
-      "means": "As agents take on real work, companies will only scale them if they can audit what the agents did. Governance is becoming a selling point, and a career path."
+      "img": "img/product_agent365_analytics.jpg",
+      "time": "1:56",
+      "product": "Agent 365 Business Analytics",
+      "alt": "Agent 365 Business Analytics drilling from Research and Discovery down to Statistical analysis plans, showing sessions, cost, AI value, active users and assisted hours for each level",
+      "title": "AI gets an ROI dashboard",
+      "what": "Agent 365 Business Analytics breaks AI use down from department to individual task. In the demo, Research & Discovery shows 7.8K sessions costing $38.8K against $100.1K of estimated AI value and 1.4K assisted hours, and you can drill down to a single use case such as statistical analysis plans.",
+      "means": "AI spending stops being a leap of faith. Leaders can see which tasks pay off and which don't, and anyone running an AI rollout will be expected to present numbers like these.",
+      "crop": [
+        0.0,
+        0.0,
+        0.75
+      ]
     },
     {
-      "img": "img/keynote_community_plan.jpg", "time": "0:30",
-      "alt": "Slide titled 'Our community-first AI infrastructure plan' with five commitments on electricity prices, water, jobs, tax base and local AI training",
-      "title": "AI's physical footprint is now a keynote topic",
-      "what": "Microsoft set out a community-first data centre plan: pay its way so data centres don't raise local electricity prices, use less water and replenish more than it uses, create local jobs, add to the tax base, and invest in local AI training.",
-      "means": "Building data centres for AI now depends on public approval as much as technology. Energy, sustainability and local-policy expertise are becoming part of the AI story, which opens doors well beyond tech roles."
+      "img": "img/product_admin_agents.jpg",
+      "time": "1:51",
+      "product": "Microsoft 365 admin center · Agent 365",
+      "alt": "Microsoft 365 admin center page 'Agents without recent activity' showing 2,600 inactive agents, cleanup actions over time and automations to notify owners, block and delete agents",
+      "title": "IT gets a clean-up crew for idle agents",
+      "what": "The admin center lists 2,600 inactive agents created in Foundry, Copilot Studio or Agent Builder, with counts that were blocked, deleted or excluded. Automations notify owners of inactive agents, block them, and delete agents that stay blocked for 30 days.",
+      "means": "Agent sprawl is the new shadow IT. Anyone can now build an agent, so someone has to track, review and retire them, and that lifecycle work becomes routine for IT teams.",
+      "crop": [
+        0.0,
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "img": "img/product_foundry_alaska.jpg",
+      "time": "1:32",
+      "product": "Microsoft Foundry · Fine-tuning",
+      "alt": "Alaska Airlines maintenance demo in Foundry comparing a baseline model at 87% accuracy and $92 a month, an optimised prompt at 94% and $370, and a fine-tuned MAI-Code-2-Flash model at 97% and $2",
+      "title": "Fine-tuning: more accurate and far cheaper",
+      "what": "In an Alaska Airlines maintenance demo (run on synthetic data), a classifier went from 87% accuracy at $92 a month, to 94% at $370 with a longer optimised prompt, to 97% at $2 a month after fine-tuning Microsoft's MAI-Code-2-Flash model. That's 227 times cheaper than the optimised version.",
+      "means": "The cheapest way to make AI better at your job isn't always a bigger model. Small models trained on your own data can beat the giants on narrow, repetitive tasks, which makes specialised AI affordable for far more teams.",
+      "crop": [
+        0.0,
+        0.0,
+        1.0
+      ]
     }
   ]
 }

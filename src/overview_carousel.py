@@ -46,9 +46,13 @@ def cover(fig, m):
 
 
 def moment(fig, it, k):
-    image(fig, ROOT / "outputs" / it["img"], 0.52)
-    fig.text(0.07, 0.465, f"KEY MOMENT {k}", fontsize=14, color="#1c5cab", fontweight="bold", va="top")
-    fig.text(0.07, 0.43, wrap(it["title"], 30), fontsize=32, fontweight="bold", color=INK, va="top", linespacing=1.15)
+    im = mpimg.imread(ROOT / "outputs" / it["img"]); h, w = im.shape[:2]
+    x0, y0, f = it.get("crop", [0, 0, 1])
+    im = im[int(y0 * h):int((y0 + f) * h), int(x0 * w):int((x0 + f) * w)]
+    ax = fig.add_axes([0.0, 0.487, 1.0, 0.45]); ax.imshow(im, aspect="auto"); ax.axis("off")
+    fig.text(0.07, 0.472, CREDIT + " · demo screen", fontsize=10.5, color=MUTED)
+    fig.text(0.07, 0.448, it.get("product", f"KEY MOMENT {k}").upper(), fontsize=14, color="#1c5cab", fontweight="bold", va="top")
+    fig.text(0.07, 0.418, wrap(it["title"], 30), fontsize=32, fontweight="bold", color=INK, va="top", linespacing=1.15)
     lines = len(textwrap.wrap(it["title"], 30))
     ax = fig.add_axes([0.05, 0.06, 0.90, 0.30 - 0.05 * (lines - 1)]); ax.axis("off")
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=WASH, transform=ax.transAxes))
@@ -92,7 +96,7 @@ def bottom(fig, o, m):
 def main():
     m = json.loads((ROOT / "data" / "keynote_moments.json").read_text())
     o = json.loads((ROOT / "data" / "outlook.json").read_text())
-    picks = [m["items"][i] for i in (0, 1, 3, 5)]
+    picks = [m["items"][i] for i in (0, 1, 4, 6, 5)]
     plan = [("dark", lambda f: cover(f, m))] + [("light", (lambda f, it=it, k=k: moment(f, it, k))) for k, it in enumerate(picks, 1)] + \
            [("light", lambda f: forces(f, o)), ("light", lambda f: roles(f, o)), ("dark", lambda f: bottom(f, o, m))]
     d = OUT / "overview_slides"; d.mkdir(parents=True, exist_ok=True)
