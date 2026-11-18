@@ -85,3 +85,14 @@ To add Day 2 to Day 4, append items to `data/announcements.json` and rerun the t
 Code: MIT. Dataset and analysis text: CC BY 4.0. This is an independent analysis, not affiliated with Microsoft.
 
 **Keynote images** in `outputs/img/` (and the slides that use them) are stills from Microsoft's official Ignite 2026 keynote replay, © Microsoft. They're used here for commentary and are **not** covered by the licences above.
+
+## Fonts
+
+The overview carousel uses **EB Garamond** (headlines, with italic accents) and **Inter** (labels and body), both from Google Fonts under the SIL Open Font License. They aren't committed. Download them before running `src/overview_carousel.py`:
+
+```bash
+mkdir -p fonts
+curl -L -o "fonts/EBGaramond[wght].ttf"        "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
+curl -L -o "fonts/EBGaramond-Italic[wght].ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond-Italic%5Bwght%5D.ttf"
+curl -L -o "fonts/Inter.ttf"                   "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz,wght%5D.ttf"
+```
