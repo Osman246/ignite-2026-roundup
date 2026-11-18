@@ -21,6 +21,8 @@ I went through the keynote demos so you don't have to. Here's what the products 
 
 🧹 IT gets tools to find and retire unused agents. One demo tenant had 2,600 of them.
 
+The reality check: an independent count found only 35% of the 215 new features are live today. Microsoft also gave no new Copilot seat number (the last one was 30M, in July).
+
 What this means for 2027:
 1. Work moves from doing to directing
 2. AI becomes a line item to manage, not a pilot to try

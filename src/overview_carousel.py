@@ -175,7 +175,26 @@ def product_slide(n, total, it):
     d.text((M, sy), c["stat"], font=serif(88, False, 600), fill=BLUE_INK, anchor="ls")
     y2 = para(d, M, sy + 52, c["label"], sans(25, 450), INK2, W - 2 * M, 34)
     d.line([(M, y2 + 6), (M + 60, y2 + 6)], fill=BLUE, width=3)
-    para(d, M, y2 + 58, c["means"], serif(38, True, 500), INK, W - 2 * M, 46)
+    para(d, M, y2 + 56, c["means"], sans(30, 560), INK, W - 2 * M, 42)
+    return im
+
+
+def reality(n, total):
+    im = Image.new("RGB", (W, H), PAPER); d = ImageDraw.Draw(im)
+    chrome(d, n, total, source="Sources: Office Watch (18 Nov 2026), Microsoft FY26 Q4 results")
+    kicker(d, 160, "Reality check · Updated 18 Nov", BLUE_INK)
+    headline(d, M, 246, "Most of it isn't *^live yet^*", 80, W - 2 * M, INK, BLUE_INK)
+    blocks = [("35%", "of Ignite's 215 new features are available today. The rest are previews, early access or 'coming soon'.", "Independent count by Office Watch"),
+              ("30M", "paid Copilot seats is still the latest figure. Microsoft gave no update at Ignite.", "Last disclosed July 2026"),
+              ("50M+", "agents now sit in Agent 365, but Microsoft hasn't said how many are actively used.", "Microsoft keynote remarks")]
+    y = 420
+    for big, text, src in blocks:
+        d.text((M, y + 70), big, font=serif(120, False, 600), fill=BLUE_INK, anchor="ls")
+        bx = M + 330
+        y2 = para(d, bx, y + 20, text, sans(28, 560), INK, W - M - bx, 38)
+        d.text((bx, y2 + 8), src.upper(), font=sans(16, 650), fill=MUTED, anchor="ls")
+        y += 250
+        d.line([(M, y - 40), (W - M, y - 40)], fill=RULE, width=1)
     return im
 
 
@@ -206,7 +225,8 @@ def roles(n, total, o):
         x, y = M + (i % 2) * (cw + gap), 340 + (i // 2) * (ch + gap)
         d.rounded_rectangle([x, y, x + cw, y + ch], 18, fill=CARD, outline=RULE, width=2)
         tracked(d, (x + 28, y + 52), r["role"].upper(), sans(18, 650), MUTED, tracking=2.2)
-        para(d, x + 28, y + 104, r["skill"], serif(38, True, 500), BLUE_INK, cw - 56, 44)
+        d.rectangle([x + 28, y + 76, x + 64, y + 80], fill=BLUE)
+        para(d, x + 28, y + 128, r["skill"], sans(29, 620), INK, cw - 56, 40)
     return im
 
 
@@ -228,10 +248,10 @@ def main():
     o = json.loads((ROOT / "data" / "outlook.json").read_text())
     by = {Path(i["img"]).stem: i for i in m["items"]}
     order = ["product_copilot_workiq", "product_autopilot", "product_agent365_analytics", "product_foundry_alaska", "product_admin_agents"]
-    total = 1 + len(order) + 3
+    total = 1 + len(order) + 4
     slides = [cover(1, total, m)]
     slides += [product_slide(i + 2, total, by[k]) for i, k in enumerate(order)]
-    slides += [forces(total - 2, total, o), roles(total - 1, total, o), bottom(total, total, o)]
+    slides += [reality(total - 3, total), forces(total - 2, total, o), roles(total - 1, total, o), bottom(total, total, o)]
     d = OUT / "overview_slides"; d.mkdir(parents=True, exist_ok=True)
     for p in d.glob("slide_*.png"):
         p.unlink()

@@ -100,6 +100,10 @@ section { display: flex; flex-direction: column; gap: 20px; }
 .timeline span { font-size: 14px; color: var(--ink-2); }
 @media (max-width: 760px) { .timeline { grid-template-columns: minmax(0, 1fr); } .timeline div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); padding-top: 14px; } .timeline div { padding-bottom: 14px; } }
 
+.reality { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.reality div { background: var(--accent-wash); border-radius: 12px; padding: 16px 18px; font-size: 15px; color: var(--ink); line-height: 1.5; }
+.reality b { font: 600 13px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); display: block; margin-bottom: 4px; }
+@media (max-width: 700px) { .reality { grid-template-columns: minmax(0, 1fr); } }
 .bottom { background: var(--stage); color: var(--stage-ink); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
 .bottom .eyebrow { color: #86b6ef; }
 .bottom h2 { color: var(--stage-ink); max-width: 30ch; }
@@ -110,7 +114,7 @@ section { display: flex; flex-direction: column; gap: 20px; }
 
 <div class="hero gut">
   <div class="wrap">
-    <div class="eyebrow">Microsoft Ignite 2026 &middot; San Francisco &middot; Overview so far</div>
+    <div class="eyebrow">Microsoft Ignite 2026 &middot; San Francisco &middot; Overview so far &middot; updated 18 Nov</div>
     <h1>The day Microsoft started selling an <em>AI workforce</em></h1>
     <p id="thesis-hero"></p>
     <figure id="hero-fig"></figure>
@@ -121,6 +125,7 @@ section { display: flex; flex-direction: column; gap: 20px; }
   <section>
     <div class="eyebrow">Day 1 at a glance</div>
     <div class="glance" id="glance"></div>
+    <div class="reality" id="reality"></div>
   </section>
 
   <section>
@@ -158,7 +163,7 @@ section { display: flex; flex-direction: column; gap: 20px; }
   <div class="foot">
     <strong>Sources, method and image credits</strong>
     <ul id="srcs"></ul>
-    <p>Keynote images are stills from Microsoft's official Ignite 2026 keynote replay, © Microsoft, used here for commentary. They are not covered by this project's open licence. The analysis and "what it means" sections are my own views. Figures marked as keynote coverage come from press reports.</p>
+    <p>Keynote images are stills from Microsoft's official Ignite 2026 keynote replay, © Microsoft, used here for commentary. They are not covered by this project's open licence. The analysis and "what it means" sections are my own views. Keynote figures are taken from Microsoft's published transcript of Satya Nadella's remarks.</p>
   </div>
 </main>
 
@@ -174,9 +179,10 @@ document.getElementById('hero-fig').innerHTML = `<img src="${hero.img}" alt="${e
 const glance = [
   [S.total, 'headline announcements logged'],
   [S.by_status.now, 'available to use today'],
-  [D.ann.numbers[0][0], D.ann.numbers[0][1] + ' (per keynote coverage)'],
+  [D.ann.numbers[0][0], D.ann.numbers[0][1]],
   [D.ann.numbers[1][0], D.ann.numbers[1][1]],
 ];
+document.getElementById('reality').innerHTML = `<div><b>Independent check</b>${esc(O.reality.independent)}</div><div><b>Still missing</b>${esc(O.reality.seats)}</div>`;
 document.getElementById('glance').innerHTML = glance.map(([b, s]) => `<div><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('');
 
 document.getElementById('moments').innerHTML = M.items.map(m => `

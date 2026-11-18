@@ -1,62 +1,448 @@
 {
   "date": "17 November 2026",
   "sources": [
-    ["Microsoft Ignite 2026 Book of News", "https://news.microsoft.com/events/ignite/2026/book-of-news/"],
-    ["Microsoft Source: Ignite 2026 overview", "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/"],
-    ["Ignite 2026 live news", "https://news.microsoft.com/events/ignite/2026/live-news/"],
-    ["Technology Record: keynote coverage", "https://www.technologyrecord.com/article/microsoft-ignite-2026-satya-nadella-predicts-rise-of-the-software-factory"],
-    ["Windows Forum: keynote explained", "https://windowsforum.com/news/microsoft-ignite-2026-keynote-copilot-agents-ai-security-and-azure-launches-explained.452746/"]
+    [
+      "Office Watch: only 76 of 215 new features are ready today",
+      "https://office-watch.com/2026/microsoft-ignite-2026-ready-today/"
+    ],
+    [
+      "Microsoft: Ignite 2026, building the frontier ecosystem (Nadella keynote remarks)",
+      "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/"
+    ],
+    [
+      "Microsoft Ignite 2026 Book of News",
+      "https://news.microsoft.com/events/ignite/2026/book-of-news/"
+    ],
+    [
+      "Microsoft Source: Ignite 2026 overview",
+      "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/"
+    ],
+    [
+      "Ignite 2026 live news",
+      "https://news.microsoft.com/events/ignite/2026/live-news/"
+    ]
   ],
   "numbers": [
-    ["50M+", "agents registered in Agent 365", "Keynote, per press coverage"],
-    ["330,000+", "Volkswagen Group employees equipped with Copilot", "Microsoft"],
-    ["350+", "third-party connectors in Microsoft IQ", "Microsoft"],
-    ["11,000+", "AI models in Microsoft Foundry", "Book of News"],
-    ["100,000+", "apps built with Rayfin since preview", "Book of News"],
-    ["~80%", "of a typical security alert queue handled by Perception's triage agent", "Book of News"]
+    [
+      "50M+",
+      "agents registered in Agent 365",
+      "Microsoft, keynote remarks"
+    ],
+    [
+      "330,000+",
+      "Volkswagen Group employees equipped with Copilot",
+      "Microsoft"
+    ],
+    [
+      "350+",
+      "third-party connectors in Microsoft IQ",
+      "Microsoft"
+    ],
+    [
+      "11,000+",
+      "AI models in Microsoft Foundry",
+      "Book of News"
+    ],
+    [
+      "100,000+",
+      "apps built with Rayfin since preview",
+      "Book of News"
+    ],
+    [
+      "~80%",
+      "of a typical security alert queue handled by Perception's triage agent",
+      "Book of News"
+    ]
   ],
   "items": [
-    {"name": "Office in Copilot", "cat": "Copilot at work", "what": "Create and edit Word, Excel and PowerPoint files from inside Copilot. Files save to OneDrive with your usual permissions and labels.", "status": "now", "label": "Available now", "who": ["everyone"], "top": true},
-    {"name": "Copilot on Windows: files and PC fixes", "cat": "Copilot at work", "what": "Ask Copilot to find, move or rename files, or to diagnose a PC problem. Arrives on Copilot+ PCs first.", "status": "preview", "label": "Preview", "who": ["everyone", "it"], "top": true},
-    {"name": "Copilot Code", "cat": "Copilot at work", "what": "Describe a dashboard, tracker or small app in plain English and Copilot builds it. Full release planned for December.", "status": "early", "label": "Early access", "who": ["everyone", "data", "dev"], "top": true},
-    {"name": "Autopilot", "cat": "Copilot at work", "what": "A long-running personal agent that handles recurring tasks. You can @mention it in Teams chats and channels.", "status": "early", "label": "Early access", "who": ["everyone"], "top": true},
-    {"name": "Copilot Workspaces", "cat": "Copilot at work", "what": "A shared space where a team and its agents work on the same project together.", "status": "early", "label": "Early access", "who": ["everyone", "leaders"]},
-    {"name": "Copilot Home", "cat": "Copilot at work", "what": "A start page that suggests what to work on next and opens the right agent for the job.", "status": "now", "label": "Rolling out", "who": ["everyone"]},
-    {"name": "Today (Brief and Feed)", "cat": "Copilot at work", "what": "A daily briefing in Outlook and the Copilot app. The Brief is included with Copilot; the live Feed uses Copilot Credits.", "status": "early", "label": "Private preview", "who": ["everyone"]},
-    {"name": "Fabric IQ in Excel", "cat": "Copilot at work", "what": "Ask questions of your company's governed data and build live PivotTables without leaving Excel.", "status": "preview", "label": "Preview", "who": ["data", "everyone"]},
-    {"name": "Salesforce in Copilot", "cat": "Copilot at work", "what": "More than 38 ready-made sales skills that work on your Salesforce data inside Copilot. A Sales Cloud view in Teams is in pilot.", "status": "preview", "label": "Preview", "who": ["leaders", "everyone"]},
-    {"name": "Dynamics 365 Sales and ERP plugins", "cat": "Copilot at work", "what": "Bring CRM and finance data into Copilot, Excel and PowerPoint, for example refreshing a customer deck automatically.", "status": "now", "label": "Available now", "who": ["leaders"]},
-    {"name": "Agent 365 Business Analytics", "cat": "Managing agents", "what": "A view of AI costs against results: task success rate, user satisfaction and hours of work assisted.", "status": "early", "label": "Early access", "who": ["leaders", "it"]},
-    {"name": "Agent 365 Cost Management", "cat": "Managing agents", "what": "See what is driving AI spend, set spending policies and get alerts before budgets are blown.", "status": "preview", "label": "Preview", "who": ["leaders", "it"]},
-    {"name": "Microsoft IQ", "cat": "Managing agents", "what": "The context layer under Copilot, now open as a platform. Pulls from Microsoft 365, Fabric and 350+ outside tools.", "status": "now", "label": "Available now", "who": ["it", "data", "dev"]},
-    {"name": "Windows agent protections", "cat": "Managing agents", "what": "Agents on PCs run in isolated containers, get their own identity, and follow company policies.", "status": "announced", "label": "Announced", "who": ["it"]},
-    {"name": "Microsoft Perception", "cat": "Security", "what": "Teams of security agents that find, defend against and fix vulnerabilities. Its triage agent handles about 80% of a typical alert queue.", "status": "now", "label": "Available now", "who": ["it"], "top": true},
-    {"name": "Entra Agent ID", "cat": "Security", "what": "Every AI agent gets an identity and access rules, the same way employees do.", "status": "preview", "label": "Preview", "who": ["it"]},
-    {"name": "Purview protection for Copilot", "cat": "Security", "what": "Stops Copilot from using sensitive files, even ones nobody has labelled, including files attached to prompts.", "status": "preview", "label": "Preview", "who": ["it", "leaders"]},
-    {"name": "Codename MDASH", "cat": "Security", "what": "More than 100 specialised agents that hunt for and confirm vulnerabilities in code.", "status": "preview", "label": "Preview", "who": ["it", "dev"]},
-    {"name": "Edge for Business: managed agent browsing", "cat": "Security", "what": "Controls for AI agents that browse the web for you, plus a skills recorder that turns a browser task into a reusable skill.", "status": "preview", "label": "Preview", "who": ["it", "everyone"]},
-    {"name": "AI Transparency Initiative", "cat": "Security", "what": "An industry effort to agree on an open, common approach to AI transparency, security and governance.", "status": "announced", "label": "Announced", "who": ["leaders"]},
-    {"name": "MAI-Code-2 and MAI-Code-2-Flash", "cat": "Models and developers", "what": "Microsoft's own coding models, pitched at frontier quality for a fraction of the cost. Live in GitHub today.", "status": "now", "label": "Available now", "who": ["dev"], "top": true},
-    {"name": "MAI-Cyber-2-Flash", "cat": "Models and developers", "what": "A compact security model (12 billion active parameters) that powers parts of Perception.", "status": "preview", "label": "Preview", "who": ["it", "dev"]},
-    {"name": "Microsoft-Decision-1.1", "cat": "Models and developers", "what": "A fast, low-cost model for routing and classification, available in Foundry, OpenRouter and Vercel.", "status": "now", "label": "Available now", "who": ["dev"]},
-    {"name": "MAI-Image-2.7", "cat": "Models and developers", "what": "Microsoft's latest image-generation model, with a faster Flash version.", "status": "preview", "label": "Preview", "who": ["dev", "everyone"]},
-    {"name": "Foundry adds GPT-6.2 and Meta models", "cat": "Models and developers", "what": "Foundry already lists more than 11,000 models. Nadella said OpenAI's GPT-6.2 and Meta's latest models are coming.", "status": "announced", "label": "Coming", "who": ["dev", "data"]},
-    {"name": "Copilot SDK 2.0", "cat": "Models and developers", "what": "Build products on the same agent engine behind Copilot. Runs on Rust and supports six programming languages.", "status": "now", "label": "Available now", "who": ["dev"]},
-    {"name": "GitHub Copilot app and code review", "cat": "Models and developers", "what": "Azure DevOps repos from clone to merge, secret detection and smarter, adjustable code reviews.", "status": "announced", "label": "Announced", "who": ["dev"]},
-    {"name": "Maia 300 AI chip", "cat": "Cloud and data", "what": "Microsoft's in-house AI chip. Nadella said it delivers 40% more tokens per watt than leading GPU systems.", "status": "announced", "label": "Announced", "who": ["leaders", "it"]},
-    {"name": "Cobalt 200 virtual machines", "cat": "Cloud and data", "what": "Cloud servers on Microsoft's own Arm chip, up to 50% faster than the last generation, in 20+ regions by year end.", "status": "now", "label": "Available now", "who": ["it", "dev"]},
-    {"name": "Azure HorizonDB", "cat": "Cloud and data", "what": "A managed PostgreSQL-compatible database with built-in AI functions and mirroring into Fabric.", "status": "now", "label": "Available now", "who": ["data", "dev"]},
-    {"name": "Power BI custom data apps", "cat": "Cloud and data", "what": "Turn a Power BI semantic model into a custom app, built in Power BI Desktop.", "status": "preview", "label": "Preview", "who": ["data"]},
-    {"name": "Database agents for SQL and PostgreSQL", "cat": "Cloud and data", "what": "Agents that help manage and tune databases from the new Database Hub in Fabric.", "status": "preview", "label": "Preview", "who": ["data", "it"]},
-    {"name": "Cloud PCs for AI work", "cat": "Cloud and data", "what": "Windows 365 Cloud PCs with up to 32 vCPUs and GPUs for heavier AI workloads.", "status": "now", "label": "Available now", "who": ["it"]},
-    {"name": "Windows Server 2028", "cat": "Cloud and data", "what": "Post-quantum cryptography, faster storage and support for running AI on your own servers.", "status": "preview", "label": "Preview", "who": ["it"]}
+    {
+      "name": "Office in Copilot",
+      "cat": "Copilot at work",
+      "what": "Create and edit Word, Excel and PowerPoint files from inside Copilot. Files save to OneDrive with your usual permissions and labels.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "everyone"
+      ],
+      "top": true
+    },
+    {
+      "name": "Copilot on Windows: files and PC fixes",
+      "cat": "Copilot at work",
+      "what": "Ask Copilot to find, move or rename files, or to diagnose a PC problem. Arrives on Copilot+ PCs first.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "everyone",
+        "it"
+      ],
+      "top": true
+    },
+    {
+      "name": "Copilot Code",
+      "cat": "Copilot at work",
+      "what": "Describe a dashboard, tracker or small app in plain English and Copilot builds it. Full release planned for December.",
+      "status": "early",
+      "label": "Early access",
+      "who": [
+        "everyone",
+        "data",
+        "dev"
+      ],
+      "top": true
+    },
+    {
+      "name": "Autopilot",
+      "cat": "Copilot at work",
+      "what": "A long-running personal agent that handles recurring tasks. You can @mention it in Teams chats and channels.",
+      "status": "early",
+      "label": "Early access",
+      "who": [
+        "everyone"
+      ],
+      "top": true
+    },
+    {
+      "name": "Copilot Workspaces",
+      "cat": "Copilot at work",
+      "what": "A shared space where a team and its agents work on the same project together.",
+      "status": "early",
+      "label": "Early access",
+      "who": [
+        "everyone",
+        "leaders"
+      ]
+    },
+    {
+      "name": "Copilot Home",
+      "cat": "Copilot at work",
+      "what": "A start page that suggests what to work on next and opens the right agent for the job.",
+      "status": "now",
+      "label": "Rolling out",
+      "who": [
+        "everyone"
+      ]
+    },
+    {
+      "name": "Today (Brief and Feed)",
+      "cat": "Copilot at work",
+      "what": "A daily briefing in Outlook and the Copilot app. The Brief is included with Copilot; the live Feed uses Copilot Credits.",
+      "status": "early",
+      "label": "Private preview",
+      "who": [
+        "everyone"
+      ]
+    },
+    {
+      "name": "Fabric IQ in Excel",
+      "cat": "Copilot at work",
+      "what": "Ask questions of your company's governed data and build live PivotTables without leaving Excel.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "data",
+        "everyone"
+      ]
+    },
+    {
+      "name": "Salesforce in Copilot",
+      "cat": "Copilot at work",
+      "what": "More than 38 ready-made sales skills that work on your Salesforce data inside Copilot. A Sales Cloud view in Teams is in pilot.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "leaders",
+        "everyone"
+      ]
+    },
+    {
+      "name": "Dynamics 365 Sales and ERP plugins",
+      "cat": "Copilot at work",
+      "what": "Bring CRM and finance data into Copilot, Excel and PowerPoint, for example refreshing a customer deck automatically.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "leaders"
+      ]
+    },
+    {
+      "name": "Agent 365 Business Analytics",
+      "cat": "Managing agents",
+      "what": "A view of AI costs against results: task success rate, user satisfaction and hours of work assisted.",
+      "status": "early",
+      "label": "Early access",
+      "who": [
+        "leaders",
+        "it"
+      ]
+    },
+    {
+      "name": "Agent 365 Cost Management",
+      "cat": "Managing agents",
+      "what": "See what is driving AI spend, set spending policies and get alerts before budgets are blown.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "leaders",
+        "it"
+      ]
+    },
+    {
+      "name": "Microsoft IQ",
+      "cat": "Managing agents",
+      "what": "The context layer under Copilot, now open as a platform. Pulls from Microsoft 365, Fabric and 350+ outside tools.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "it",
+        "data",
+        "dev"
+      ]
+    },
+    {
+      "name": "Windows agent protections",
+      "cat": "Managing agents",
+      "what": "Agents on PCs run in isolated containers, get their own identity, and follow company policies.",
+      "status": "announced",
+      "label": "Announced",
+      "who": [
+        "it"
+      ]
+    },
+    {
+      "name": "Microsoft Perception",
+      "cat": "Security",
+      "what": "Teams of security agents that find, defend against and fix vulnerabilities. Its triage agent handles about 80% of a typical alert queue.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "it"
+      ],
+      "top": true
+    },
+    {
+      "name": "Entra Agent ID",
+      "cat": "Security",
+      "what": "Every AI agent gets an identity and access rules, the same way employees do.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "it"
+      ]
+    },
+    {
+      "name": "Purview protection for Copilot",
+      "cat": "Security",
+      "what": "Stops Copilot from using sensitive files, even ones nobody has labelled, including files attached to prompts.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "it",
+        "leaders"
+      ]
+    },
+    {
+      "name": "Codename MDASH",
+      "cat": "Security",
+      "what": "More than 100 specialised agents that hunt for and confirm vulnerabilities in code.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "it",
+        "dev"
+      ]
+    },
+    {
+      "name": "Edge for Business: managed agent browsing",
+      "cat": "Security",
+      "what": "Controls for AI agents that browse the web for you, plus a skills recorder that turns a browser task into a reusable skill.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "it",
+        "everyone"
+      ]
+    },
+    {
+      "name": "AI Transparency Initiative",
+      "cat": "Security",
+      "what": "An industry effort, with 40 organisations and NIST's Agent Standards Initiative, to agree an open approach to AI transparency, security and governance.",
+      "status": "announced",
+      "label": "Announced",
+      "who": [
+        "leaders"
+      ]
+    },
+    {
+      "name": "MAI-Code-2 and MAI-Code-2-Flash",
+      "cat": "Models and developers",
+      "what": "Microsoft's own coding models, pitched at frontier quality for a fraction of the cost. Live in GitHub today.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "dev"
+      ],
+      "top": true
+    },
+    {
+      "name": "MAI-Cyber-2-Flash",
+      "cat": "Models and developers",
+      "what": "A compact security model (12 billion active parameters) that powers parts of Perception.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "it",
+        "dev"
+      ]
+    },
+    {
+      "name": "Microsoft-Decision-1.1",
+      "cat": "Models and developers",
+      "what": "A fast, low-cost model for routing and classification. More than 4,000 customers have already used it, in Foundry, OpenRouter and Vercel.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "dev"
+      ]
+    },
+    {
+      "name": "MAI-Image-2.7",
+      "cat": "Models and developers",
+      "what": "Microsoft's latest image-generation model, with a faster Flash version.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "dev",
+        "everyone"
+      ]
+    },
+    {
+      "name": "Foundry adds GPT-6.2 and Meta models",
+      "cat": "Models and developers",
+      "what": "Foundry already lists more than 11,000 models. Nadella said OpenAI's GPT-6.2 and Meta's latest models are coming.",
+      "status": "announced",
+      "label": "Coming",
+      "who": [
+        "dev",
+        "data"
+      ]
+    },
+    {
+      "name": "Copilot SDK 2.0",
+      "cat": "Models and developers",
+      "what": "Build products on the same agent engine behind Copilot. Runs on Rust and supports six programming languages.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "dev"
+      ]
+    },
+    {
+      "name": "GitHub Copilot app and code review",
+      "cat": "Models and developers",
+      "what": "Azure DevOps repos from clone to merge, secret detection and smarter, adjustable code reviews.",
+      "status": "announced",
+      "label": "Announced",
+      "who": [
+        "dev"
+      ]
+    },
+    {
+      "name": "Maia 300 AI chip",
+      "cat": "Cloud and data",
+      "what": "Microsoft's in-house AI chip. Microsoft says it delivers 40% more tokens per watt than leading GPU-based systems.",
+      "status": "announced",
+      "label": "Announced",
+      "who": [
+        "leaders",
+        "it"
+      ]
+    },
+    {
+      "name": "Cobalt 200 virtual machines",
+      "cat": "Cloud and data",
+      "what": "Cloud servers on Microsoft's own Arm chip, up to 50% faster than the last generation, in 20+ regions by year end.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "it",
+        "dev"
+      ]
+    },
+    {
+      "name": "Azure HorizonDB",
+      "cat": "Cloud and data",
+      "what": "A managed PostgreSQL-compatible database with built-in AI functions and mirroring into Fabric.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "data",
+        "dev"
+      ]
+    },
+    {
+      "name": "Power BI custom data apps",
+      "cat": "Cloud and data",
+      "what": "Turn a Power BI semantic model into a custom app, built in Power BI Desktop.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "data"
+      ]
+    },
+    {
+      "name": "Database agents for SQL and PostgreSQL",
+      "cat": "Cloud and data",
+      "what": "Agents that help manage and tune databases from the new Database Hub in Fabric.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "data",
+        "it"
+      ]
+    },
+    {
+      "name": "Cloud PCs for AI work",
+      "cat": "Cloud and data",
+      "what": "Windows 365 Cloud PCs with up to 32 vCPUs and GPUs for heavier AI workloads.",
+      "status": "now",
+      "label": "Available now",
+      "who": [
+        "it"
+      ]
+    },
+    {
+      "name": "Windows Server 2028",
+      "cat": "Cloud and data",
+      "what": "Post-quantum cryptography, faster storage and support for running AI on your own servers.",
+      "status": "preview",
+      "label": "Preview",
+      "who": [
+        "it"
+      ]
+    }
   ],
   "takeaways": [
-    {"title": "Copilot is becoming the operating system for work", "body": "Microsoft now calls Copilot the new operating system for work, built around four modes: Chat, Cowork, Code and Autopilot. Word, Excel and PowerPoint open inside it. Over the next year, the skill that matters shifts from knowing your way around Office to directing agents well."},
-    {"title": "Microsoft is building its own AI stack", "body": "It announced its own coding, security, image and decision models (MAI) and its own chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry. Expect more choice and lower prices, and less dependence on any single AI lab."},
-    {"title": "Agents are being managed like employees", "body": "Agents now get an identity (Entra Agent ID), a budget (Cost Management), performance reviews (Business Analytics) and security cover (Perception). Managing a mixed team of people and agents is turning into an everyday management skill."},
-    {"title": "Copilot is opening up to other vendors' tools", "body": "Salesforce runs inside Copilot. Fabric data can be used in ChatGPT and Claude. Microsoft IQ has 350+ connectors. Microsoft is betting that being the place where work happens matters more than owning every tool."},
-    {"title": "Trust is now part of the pitch", "body": "The AI Transparency Initiative, Purview controls for Copilot, and a public acknowledgement of last week's outage all point the same way. Microsoft knows big customers will only hand work to agents they can audit and control."}
+    {
+      "title": "Copilot is becoming the operating system for work",
+      "body": "Microsoft now calls Copilot the new operating system for work, built around four modes: Chat, Cowork, Code and Autopilot. Word, Excel and PowerPoint open inside it. Over the next year, the skill that matters shifts from knowing your way around Office to directing agents well."
+    },
+    {
+      "title": "Microsoft is building its own AI stack",
+      "body": "It announced its own coding, security, image and decision models (MAI) and its own chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry. Expect more choice and lower prices, and less dependence on any single AI lab."
+    },
+    {
+      "title": "Agents are being managed like employees",
+      "body": "Agents now get an identity (Entra Agent ID), a budget (Cost Management), performance reviews (Business Analytics) and security cover (Perception). Managing a mixed team of people and agents is turning into an everyday management skill."
+    },
+    {
+      "title": "Copilot is opening up to other vendors' tools",
+      "body": "Salesforce runs inside Copilot. Fabric data can be used in ChatGPT and Claude. Microsoft IQ has 350+ connectors. Microsoft is betting that being the place where work happens matters more than owning every tool."
+    },
+    {
+      "title": "Trust is now part of the pitch",
+      "body": "The AI Transparency Initiative, Purview controls for Copilot, and a public acknowledgement of last week's outage all point the same way. Microsoft knows big customers will only hand work to agents they can audit and control."
+    }
   ],
   "watch": [
     "Copilot Code reaching general availability in December, the first chance for most people to build their own apps by describing them.",

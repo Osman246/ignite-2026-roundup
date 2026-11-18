@@ -15,7 +15,7 @@
     },
     {
       "title": "The AI stack is being rebuilt, and getting cheaper",
-      "evidence": "Microsoft launched its own models (MAI-Code-2, MAI-Cyber-2-Flash, MAI-Image-2.7, Microsoft-Decision-1.1) and chips (Maia 300, Cobalt 200), while still adding OpenAI and Meta models to Foundry.",
+      "evidence": "Microsoft launched its own models (MAI-Code-2, MAI-Cyber-2-Flash, MAI-Image-2.7, Microsoft-Decision-1.1, already used by 4,000+ customers) and chips (Maia 300, Cobalt 200). It added MAI Licensed Weights so trusted customers can run its models themselves, while still bringing OpenAI's GPT-6.2 and Meta models to Foundry.",
       "beyond": "Every major cloud now designs its own chips and models. Competition at every layer pushes the cost of a given level of AI down year after year.",
       "so_what": "Use cases that were too expensive in 2025 become affordable in 2027. Choosing the right model for each job becomes a routine decision, much like choosing the right database."
     },
@@ -27,24 +27,64 @@
     },
     {
       "title": "Trust decides how far agents can go",
-      "evidence": "Agents get identities (Entra Agent ID), data guardrails (Purview), threat protection (Defender) and their own security agents (Perception). Microsoft also launched an AI Transparency Initiative and acknowledged last week's outage on stage.",
+      "evidence": "Agents get identities (Entra Agent ID), data guardrails (Purview), threat protection (Defender) and their own security agents (Perception). The AI Transparency Initiative launched with 40 organisations and NIST's Agent Standards Initiative, and Nadella acknowledged last week's outage on stage.",
       "beyond": "AI rules such as the EU AI Act are phasing in, and boards are asking who is accountable when an agent gets something wrong.",
       "so_what": "AI governance, risk and security roles grow fast. Everyone else will need to understand what their agents can access and do."
     }
   ],
   "roles": [
-    {"role": "Business leaders", "change": "AI moves from innovation budget to operating budget, with ROI dashboards attached.", "skill": "Setting AI KPIs and owning AI spend"},
-    {"role": "Managers", "change": "Your team will include agents. Work gets split between people and agents.", "skill": "Redesigning workflows and reviewing agent output"},
-    {"role": "IT and security", "change": "Every agent needs an identity, permissions and monitoring, just like a new hire.", "skill": "Agent identity, data governance and AI security"},
-    {"role": "Data and analytics", "change": "Fabric and Power BI semantic models become the context that Copilot and other assistants rely on.", "skill": "Building trusted semantic models and data products"},
-    {"role": "Developers", "change": "Coding agents handle more routine work. The job shifts towards architecture, review and building agents.", "skill": "Agent frameworks (Copilot SDK, Foundry) and evaluating AI output"},
-    {"role": "Everyone at work", "change": "Copilot becomes the first screen of the day, with a briefing, drafts and tasks handed to Autopilot.", "skill": "Writing clear briefs and checking AI output critically"}
+    {
+      "role": "Business leaders",
+      "change": "AI moves from innovation budget to operating budget, with ROI dashboards attached.",
+      "skill": "Setting AI KPIs and owning AI spend"
+    },
+    {
+      "role": "Managers",
+      "change": "Your team will include agents. Work gets split between people and agents.",
+      "skill": "Redesigning workflows and reviewing agent output"
+    },
+    {
+      "role": "IT and security",
+      "change": "Every agent needs an identity, permissions and monitoring, just like a new hire.",
+      "skill": "Agent identity, data governance and AI security"
+    },
+    {
+      "role": "Data and analytics",
+      "change": "Fabric and Power BI semantic models become the context that Copilot and other assistants rely on.",
+      "skill": "Building trusted semantic models and data products"
+    },
+    {
+      "role": "Developers",
+      "change": "Coding agents handle more routine work. The job shifts towards architecture, review and building agents.",
+      "skill": "Agent frameworks (Copilot SDK, Foundry) and evaluating AI output"
+    },
+    {
+      "role": "Everyone at work",
+      "change": "Copilot becomes the first screen of the day, with a briefing, drafts and tasks handed to Autopilot.",
+      "skill": "Writing clear briefs and checking AI output critically"
+    }
   ],
   "timeline": [
-    ["Now", "Office in Copilot, Microsoft IQ, Perception, MAI-Code-2 in GitHub, Cobalt 200, HorizonDB are generally available"],
-    ["December 2026", "Copilot Code planned for general availability"],
-    ["Early 2027", "Perception AI Readiness in preview (January), GPU Cloud PCs for 4K streaming in preview"],
-    ["2027", "Frontier features (Autopilot, Workspaces, Agent 365 Business Analytics) expected to roll out more widely"]
+    [
+      "Now",
+      "Office in Copilot, Microsoft IQ, Perception, MAI-Code-2 in GitHub, Cobalt 200, HorizonDB are generally available"
+    ],
+    [
+      "December 2026",
+      "Copilot Code planned for general availability"
+    ],
+    [
+      "Early 2027",
+      "Perception AI Readiness in preview (January), GPU Cloud PCs for 4K streaming in preview"
+    ],
+    [
+      "2027",
+      "Frontier features (Autopilot, Workspaces, Agent 365 Business Analytics) expected to roll out more widely"
+    ]
   ],
-  "bottom_line": "The question for 2027 isn't whether to use AI at work. It's how many of your team's tasks you hand to agents, who manages those agents, and how you prove they're worth it."
+  "bottom_line": "The question for 2027 isn't whether to use AI at work. It's how many of your team's tasks you hand to agents, who manages those agents, and how you prove they're worth it.",
+  "reality": {
+    "independent": "An independent count by Office Watch split Microsoft's 59 announcements into 215 features: 76 (35%) are generally available today, 109 are previews or Frontier-only.",
+    "seats": "Microsoft gave no new Copilot seat count at Ignite. The last disclosed figure is over 30 million paid seats, in July 2026."
+  }
 }
