@@ -157,9 +157,9 @@ def cover(n, total, m):
     im = Image.new("RGB", (W, H), STAGE); d = ImageDraw.Draw(im)
     paste_image(im, OUT / m["hero"]["img"], (0, 112, W, 608), radius=0)
     chrome(d, n, total, dark=True, source="Image: Microsoft Ignite 2026 keynote")
-    kicker(d, 800, "Day 1 · San Francisco · 17 Nov 2026", BLUE_LT)
-    y = headline(d, M, 900, "The day Microsoft started selling an *^AI workforce^*", 92, W - 2 * M, STAGE_INK, BLUE_LT, 1.02)
-    para(d, M, y + 12, "Five product demos, what they mean, and the one skill to build for 2027.", sans(31, 400), STAGE_INK2, W - 2 * M, 44)
+    kicker(d, 800, "Microsoft Ignite 2026 · This week", BLUE_LT)
+    y = headline(d, M, 900, "215 new features. Here are the *^ones that matter.^*", 88, W - 2 * M, STAGE_INK, BLUE_LT, 1.02)
+    para(d, M, y + 12, "Five product demos, what they mean for your job, and the one skill to build for 2027.", sans(31, 400), STAGE_INK2, W - 2 * M, 44)
     return im
 
 
