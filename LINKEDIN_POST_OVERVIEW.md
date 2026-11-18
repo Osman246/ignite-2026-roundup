@@ -30,7 +30,8 @@ Yes / Not yet / Never
 ---
 
 **First comment (pin it):**
-Full overview, product screenshots, open data and code: https://github.com/Osman246/ignite-2026-roundup
+Full visual overview with product screenshots: https://osman246.github.io/ignite-2026-roundup/
+Open data and code: https://github.com/Osman246/ignite-2026-roundup
 Sources: Microsoft's Ignite Book of News and keynote remarks, plus Office Watch's count of 215 features (18 Nov).
 
 ---
