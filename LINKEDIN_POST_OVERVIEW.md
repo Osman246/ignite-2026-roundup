@@ -9,7 +9,7 @@
 ---
 
 Microsoft announced 215 new features at Ignite this week.
-Only 35% of them work today.
+76 of them you can use today. These are the ones worth your time.
 
 I work in integration and technical delivery, so I went through the keynote demos looking for the ones that change how work actually gets done. Three stood out:
 
@@ -21,7 +21,7 @@ I work in integration and technical delivery, so I went through the keynote demo
 
 My take: the skill that matters in 2027 isn't knowing where Copilot's buttons are. It's briefing, checking and managing agents.
 
-The carousel has the product screens, the reality check, and the one skill to build for your role 👇
+The carousel has the product screens, Ignite by the numbers, and the one skill to build for your role 👇
 
 Would you hand your Monday pipeline review to Copilot?
 Yes / Not yet / Never

@@ -181,12 +181,12 @@ def product_slide(n, total, it):
 
 def reality(n, total):
     im = Image.new("RGB", (W, H), PAPER); d = ImageDraw.Draw(im)
-    chrome(d, n, total, source="Sources: Office Watch (18 Nov 2026), Microsoft FY26 Q4 results")
-    kicker(d, 160, "Reality check · Updated 18 Nov", BLUE_INK)
-    headline(d, M, 246, "Most of it isn't *^live yet^*", 80, W - 2 * M, INK, BLUE_INK)
-    blocks = [("35%", "of Ignite's 215 new features are available today. The rest are previews, early access or 'coming soon'.", "Independent count by Office Watch"),
-              ("30M", "paid Copilot seats is still the latest figure. Microsoft gave no update at Ignite.", "Last disclosed July 2026"),
-              ("50M+", "agents now sit in Agent 365, but Microsoft hasn't said how many are actively used.", "Microsoft keynote remarks")]
+    chrome(d, n, total, source="Sources: Microsoft Ignite 2026 keynote and announcements; Office Watch, 18 Nov 2026")
+    kicker(d, 160, "This week at Ignite · 17–18 Nov 2026", BLUE_INK)
+    headline(d, M, 246, "Ignite *^by the numbers^*", 80, W - 2 * M, INK, BLUE_INK)
+    blocks = [("50M+", "AI agents already registered in Agent 365, Microsoft's new control centre for managing them.", "Satya Nadella, Ignite keynote"),
+              ("330K", "Volkswagen Group employees now equipped with Copilot, a rollout Microsoft highlighted at Ignite.", "Microsoft, Ignite 2026"),
+              ("76", "brand-new features you can start using today, from Office in Copilot to new security agents.", "Count of Microsoft's Book of News by Office Watch")]
     y = 420
     for big, text, src in blocks:
         d.text((M, y + 70), big, font=serif(120, False, 600), fill=BLUE_INK, anchor="ls")
@@ -194,7 +194,8 @@ def reality(n, total):
         y2 = para(d, bx, y + 20, text, sans(28, 560), INK, W - M - bx, 38)
         d.text((bx, y2 + 8), src.upper(), font=sans(16, 650), fill=MUTED, anchor="ls")
         y += 250
-        d.line([(M, y - 40), (W - M, y - 40)], fill=RULE, width=1)
+        if big != "76":
+            d.line([(M, y - 40), (W - M, y - 40)], fill=RULE, width=1)
     return im
 
 

@@ -182,7 +182,7 @@ const glance = [
   [D.ann.numbers[0][0], D.ann.numbers[0][1]],
   [D.ann.numbers[1][0], D.ann.numbers[1][1]],
 ];
-document.getElementById('reality').innerHTML = `<div><b>Independent check</b>${esc(O.reality.independent)}</div><div><b>Still missing</b>${esc(O.reality.seats)}</div>`;
+document.getElementById('reality').innerHTML = `<div><b>Ready today</b>${esc(O.reality.independent)}</div><div><b>At scale</b>${esc(O.reality.seats)}</div>`;
 document.getElementById('glance').innerHTML = glance.map(([b, s]) => `<div><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('');
 
 document.getElementById('moments').innerHTML = M.items.map(m => `
