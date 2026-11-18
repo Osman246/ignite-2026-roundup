@@ -1,6 +1,6 @@
 # LinkedIn post: Ignite 2026 overview (main post)
 
-**Format:** a document post. Upload `outputs/linkedin_overview_carousel.pdf` and give it the title "Ignite 2026: what's real, what's coming, and the skill to build".
+**Format:** a document post. Upload `outputs/linkedin_overview_carousel.pdf` and give it the title "Ignite 2026: what's live, what's next, the skill to build".
 **Timing:** post during Ignite week (it ends 20 Nov), Tuesday to Thursday, 8–9am.
 **Before posting:**
 - Share the overview page from its Share menu first. It's private until you do, so the first-comment link would fail.
