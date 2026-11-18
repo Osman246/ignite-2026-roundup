@@ -3,7 +3,6 @@
 **Format:** a document post. Upload `outputs/linkedin_overview_carousel.pdf` and give it the title "Ignite 2026: what's live, what's next, the skill to build".
 **Timing:** post during Ignite week (it ends 20 Nov), Tuesday to Thursday, 8–9am.
 **Before posting:**
-- Share the overview page from its Share menu first. It's private until you do, so the first-comment link would fail.
 - Check the personal line ("I work in integration and technical delivery…") is how you'd describe your work, and edit it if not.
 
 ---
@@ -31,8 +30,7 @@ Yes / Not yet / Never
 ---
 
 **First comment (pin it):**
-Full visual overview, with product screenshots and what it means for each role: <your overview link>
-Open data and code: https://github.com/Osman246/ignite-2026-roundup
+Full overview, product screenshots, open data and code: https://github.com/Osman246/ignite-2026-roundup
 Sources: Microsoft's Ignite Book of News and keynote remarks, plus Office Watch's count of 215 features (18 Nov).
 
 ---
