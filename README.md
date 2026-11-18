@@ -10,7 +10,7 @@
 
 ## The overview: key moments from the keynote, and what they mean
 
-The [visual overview](https://osman246.github.io/ignite-2026-roundup/) ([source](outputs/overview.html)) is built built around high-resolution product screens from the keynote demos:
+The [visual overview](https://osman246.github.io/ignite-2026-roundup/) ([source](outputs/overview.html)) is built around high-resolution product screens from the keynote demos:
 
 - **Microsoft 365 Copilot + Work IQ:** runs a sales review across Salesforce, Outlook and Teams, showing every step it takes.
 - **Autopilot:** takes standing instructions and asks you to approve what it produces.
