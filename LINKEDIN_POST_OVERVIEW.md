@@ -1,43 +1,44 @@
 # LinkedIn post: Ignite 2026 overview (main post)
 
-**Format:** a document post. Upload `outputs/linkedin_overview_carousel.pdf` and give it the title "Ignite 2026: the day Microsoft started selling an AI workforce".
-**Timing:** post during Ignite week (17–20 Nov), on a weekday morning.
-**Links:** put the overview page and GitHub repo in the first comment.
-**Images:** the slides use product screens from Microsoft's keynote demos, credited on each slide.
+**Format:** a document post. Upload `outputs/linkedin_overview_carousel.pdf` and give it the title "Ignite 2026: what's real, what's coming, and the skill to build".
+**Timing:** post during Ignite week (it ends 20 Nov), Tuesday to Thursday, 8–9am.
+**Before posting:**
+- Share the overview page from its Share menu first. It's private until you do, so the first-comment link would fail.
+- Check the personal line ("I work in integration and technical delivery…") is how you'd describe your work, and edit it if not.
 
 ---
 
-Yesterday at Ignite, Microsoft stopped selling AI as a feature and started selling it as a workforce.
+Microsoft announced 215 new features at Ignite this week.
+Only 35% of them work today.
 
-I went through the keynote demos so you don't have to. Here's what the products actually do 👇
+I work in integration and technical delivery, so I went through the keynote demos looking for the ones that change how work actually gets done. Three stood out:
 
-📊 Copilot ran a full sales review on its own. It pulled the pipeline from Salesforce, flagged the deals at risk and drafted a Teams message, showing every step it took.
+📊 Copilot ran a full sales review across Salesforce, Outlook and Teams in one conversation, and showed every step it took. That's integration work, done by an agent.
 
-🤖 Autopilot takes standing instructions. "If a client hasn't replied in a week, draft a follow-up for me to approve."
+💷 Agent 365 now puts a cost and an estimated value on every AI task. AI finally has an ROI dashboard.
 
-💷 AI gets an ROI dashboard. Agent 365 shows the cost, estimated value and hours saved for each team and each task.
+✈️ In an Alaska Airlines demo, a small trained model hit 97% accuracy for $2 a month instead of $370.
 
-✈️ In an Alaska Airlines demo, a fine-tuned model was more accurate (97%) and cost $2 a month instead of $370.
+My take: the skill that matters in 2027 isn't knowing where Copilot's buttons are. It's briefing, checking and managing agents.
 
-🧹 IT gets tools to find and retire unused agents. One demo tenant had 2,600 of them.
+The carousel has the product screens, the reality check, and the one skill to build for your role 👇
 
-The reality check: an independent count found only 35% of the 215 new features are live today. Microsoft also gave no new Copilot seat number (the last one was 30M, in July).
+Would you hand your Monday pipeline review to Copilot?
+Yes / Not yet / Never
 
-What this means for 2027:
-1. Work moves from doing to directing
-2. AI becomes a line item to manage, not a pilot to try
-3. Smaller models trained on your own data get cheaper and better
-4. Copilot connects to tools beyond Microsoft
-5. Trust decides how far agents can go
-
-The skill that matters most next year is knowing how to brief, check and manage agents, not knowing which buttons to press.
-
-Which of these will change your job first? 👇
-
-#MicrosoftIgnite #FutureOfWork #Copilot #AI #Leadership
+#MicrosoftIgnite #Copilot #AI #FutureOfWork
 
 ---
 
-**First comment:**
-Full visual overview, with product screenshots and what it means for your role: <your overview link>
+**First comment (pin it):**
+Full visual overview, with product screenshots and what it means for each role: <your overview link>
 Open data and code: https://github.com/Osman246/ignite-2026-roundup
+Sources: Microsoft's Ignite Book of News and keynote remarks, plus Office Watch's count of 215 features (18 Nov).
+
+---
+
+## After posting
+
+- Stay around for the first hour and reply to every comment with a question back.
+- If someone answers "Not yet" or "Never", ask what would change their mind. Those threads get the most reach.
+- Repost 1–2 days later with one line about the most interesting answer.

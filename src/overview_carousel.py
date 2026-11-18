@@ -238,8 +238,8 @@ def bottom(n, total, o):
     y = headline(d, M, 800, "The question for 2027 isn't *whether* to use AI. It's how much work you hand to agents, and how you prove it's *^worth it.^*",
                  54, W - 2 * M, STAGE_INK, BLUE_LT, 1.12)
     d.rounded_rectangle([M, y + 10, W - M, y + 170], 18, fill=(22, 30, 48))
-    d.text((M + 32, y + 70), "Which shift will change your job first?", font=sans(30, 650), fill=STAGE_INK, anchor="ls")
-    d.text((M + 32, y + 122), "Tell me in the comments, and save this for 2027 planning.", font=sans(24, 400), fill=STAGE_INK2, anchor="ls")
+    d.text((M + 32, y + 70), "Would you hand your Monday pipeline review to Copilot?", font=sans(28, 650), fill=STAGE_INK, anchor="ls")
+    d.text((M + 32, y + 122), "Yes  ·  Not yet  ·  Never. Tell me in the comments.", font=sans(24, 400), fill=STAGE_INK2, anchor="ls")
     return im
 
 
