@@ -2,13 +2,15 @@
 
 **Everything Microsoft announced at Ignite 2026 so far, in plain English: the best announcements, what you can use today, and what it means for 2027.** It's built as an open dataset with an interactive page and a LinkedIn carousel.
 
+**[View the visual overview →](https://osman246.github.io/ignite-2026-roundup/)** · [All announcements, filterable](https://osman246.github.io/ignite-2026-roundup/outputs/roundup.html)
+
 | | |
 |---|---|
 | ![Overview cover](outputs/overview_slides/slide_01.png) | ![Key moment](outputs/overview_slides/slide_04.png) |
 
 ## The overview: key moments from the keynote, and what they mean
 
-[`outputs/overview.html`](outputs/overview.html) is a visual overview built around high-resolution product screens from the keynote demos:
+The [visual overview](https://osman246.github.io/ignite-2026-roundup/) ([source](outputs/overview.html)) is built built around high-resolution product screens from the keynote demos:
 
 - **Microsoft 365 Copilot + Work IQ:** runs a sales review across Salesforce, Outlook and Teams, showing every step it takes.
 - **Autopilot:** takes standing instructions and asks you to approve what it produces.
@@ -46,7 +48,7 @@ I logged **34 headline announcements** from Day 1 and tagged each one by area, a
 4. **Copilot is opening up to other vendors' tools.** Salesforce runs in Copilot, Fabric data works in ChatGPT and Claude, and there are 350+ connectors.
 5. **Trust is now part of the pitch.** Microsoft announced transparency standards and tighter data controls.
 
-The interactive page is in [`outputs/roundup.html`](outputs/roundup.html). Open it in a browser to filter announcements by your role and by availability.
+The [interactive page](https://osman246.github.io/ignite-2026-roundup/outputs/roundup.html) lets you filter announcements by your role and by availability.
 
 ## Project structure
 
